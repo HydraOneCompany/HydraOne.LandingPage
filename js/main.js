@@ -1,5 +1,5 @@
 /**
- * Hydra Systems - Interactive Core Script
+ * Hydra One - Interactive Core Script
  * Enterprise Software Development & Architecture Consulting
  */
 
@@ -93,7 +93,7 @@ const CODE_SNIPPETS = {
 <span class="code-line"><span class="line-number">2</span><span class="line-code"></span></span>
 <span class="code-line"><span class="line-number">3</span><span class="line-code"><span class="syn-kw">import</span> (</span></span>
 <span class="code-line"><span class="line-number">4</span><span class="line-code">    <span class="syn-str">"context"</span></span></span>
-<span class="code-line"><span class="line-number">5</span><span class="line-code">    <span class="syn-str">"github.com/hydra/core/pipeline"</span></span></span>
+<span class="code-line"><span class="line-number">5</span><span class="line-code">    <span class="syn-str">"github.com/hydraone/core/pipeline"</span></span></span>
 <span class="code-line"><span class="line-number">6</span><span class="line-code">)</span></span>
 <span class="code-line"><span class="line-number">7</span><span class="line-code"></span></span>
 <span class="code-line"><span class="line-number">8</span><span class="line-code"><span class="syn-comment">// Dispatch webhooks with exponential retries and concurrency control</span></span></span>
@@ -109,9 +109,9 @@ const CODE_SNIPPETS = {
     filename: 'workers/ai_assistant.py',
     status: 'Python 3.12 • FastAPI + LangChain • Streaming',
     code: `<span class="code-line"><span class="line-number">1</span><span class="line-code"><span class="syn-kw">from</span> fastapi <span class="syn-kw">import</span> FastAPI, Depends</span></span>
-<span class="code-line"><span class="line-number">2</span><span class="line-code"><span class="syn-kw">from</span> hydra_rag <span class="syn-kw">import</span> VectorIndexer, SemanticStream</span></span>
+<span class="code-line"><span class="line-number">2</span><span class="line-code"><span class="syn-kw">from</span> hydraone_rag <span class="syn-kw">import</span> VectorIndexer, SemanticStream</span></span>
 <span class="code-line"><span class="line-number">3</span><span class="line-code"></span></span>
-<span class="code-line"><span class="line-number">4</span><span class="line-code"><span class="syn-prop">app</span> = <span class="syn-type">FastAPI</span>(<span class="syn-prop">title</span>=<span class="syn-str">"Hydra SaaS AI Copilot Engine"</span>)</span></span>
+<span class="code-line"><span class="line-number">4</span><span class="line-code"><span class="syn-prop">app</span> = <span class="syn-type">FastAPI</span>(<span class="syn-prop">title</span>=<span class="syn-str">"Hydra One SaaS AI Copilot Engine"</span>)</span></span>
 <span class="code-line"><span class="line-number">5</span><span class="line-code"></span></span>
 <span class="code-line"><span class="line-number">6</span><span class="line-code"><span class="syn-comment">// Embedded intelligent RAG pipeline for internal systems</span></span></span>
 <span class="code-line"><span class="line-number">7</span><span class="line-code"><span class="syn-kw">@app.post</span>(<span class="syn-str">"/api/v1/ai/generate"</span>)</span></span>
@@ -124,7 +124,7 @@ const CODE_SNIPPETS = {
     filename: 'crates/auth-engine/src/lib.rs',
     status: 'Rust 1.78 • Zero-Copy JWT • Sub-millisecond',
     code: `<span class="code-line"><span class="line-number">1</span><span class="line-code"><span class="syn-kw">use</span> actix_web::{web, HttpResponse};</span></span>
-<span class="code-line"><span class="line-number">2</span><span class="line-code"><span class="syn-kw">use</span> hydra_security::{<span class="syn-type">TokenVerifier</span>, <span class="syn-type">TenantContext</span>};</span></span>
+<span class="code-line"><span class="line-number">2</span><span class="line-code"><span class="syn-kw">use</span> hydraone_security::{<span class="syn-type">TokenVerifier</span>, <span class="syn-type">TenantContext</span>};</span></span>
 <span class="code-line"><span class="line-number">3</span><span class="line-code"></span></span>
 <span class="code-line"><span class="line-number">4</span><span class="line-code"><span class="syn-kw">pub async fn</span> <span class="syn-fn">authorize_request</span>(</span></span>
 <span class="code-line"><span class="line-number">5</span><span class="line-code">    <span class="syn-prop">token</span>: <span class="syn-type">web::Header</span>&lt;<span class="syn-type">Authorization</span>&gt;,</span></span>
@@ -138,7 +138,7 @@ const CODE_SNIPPETS = {
   csharp: {
     filename: 'Controllers/EnterpriseSyncController.cs',
     status: 'C# .NET 8 • ERP & CRM Custom Integrations',
-    code: `<span class="code-line"><span class="line-number">1</span><span class="line-code"><span class="syn-kw">namespace</span> Hydra.Enterprise.Controllers;</span></span>
+    code: `<span class="code-line"><span class="line-number">1</span><span class="line-code"><span class="syn-kw">namespace</span> HydraOne.Enterprise.Controllers;</span></span>
 <span class="code-line"><span class="line-number">2</span><span class="line-code"></span></span>
 <span class="code-line"><span class="line-number">3</span><span class="line-code">[<span class="syn-type">ApiController</span>, <span class="syn-type">Route</span>(<span class="syn-str">"api/sync/erp"</span>)]</span></span>
 <span class="code-line"><span class="line-number">4</span><span class="line-code"><span class="syn-kw">public class</span> <span class="syn-type">EnterpriseSyncController</span> : <span class="syn-type">ControllerBase</span> {</span></span>
@@ -150,9 +150,9 @@ const CODE_SNIPPETS = {
 <span class="code-line"><span class="line-number">10</span><span class="line-code">}</span></span>`
   },
   java: {
-    filename: 'src/main/java/com/hydra/saas/AuditLogService.java',
+    filename: 'src/main/java/com/hydraone/saas/AuditLogService.java',
     status: 'Java 21 • Spring Boot 3 • Virtual Threads',
-    code: `<span class="code-line"><span class="line-number">1</span><span class="line-code"><span class="syn-kw">package</span> com.hydra.saas.audit;</span></span>
+    code: `<span class="code-line"><span class="line-number">1</span><span class="line-code"><span class="syn-kw">package</span> com.hydraone.saas.audit;</span></span>
 <span class="code-line"><span class="line-number">2</span><span class="line-code"></span></span>
 <span class="code-line"><span class="line-number">3</span><span class="line-code"><span class="syn-kw">@Service</span></span></span>
 <span class="code-line"><span class="line-number">4</span><span class="line-code"><span class="syn-kw">public class</span> <span class="syn-type">AuditLogService</span> {</span></span>
