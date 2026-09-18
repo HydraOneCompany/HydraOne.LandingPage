@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hydra One — Desenvolvimento de Software & Consultoria Especializada</title>
+  <meta name="description"
+    content="A Hydra desenvolve softwares sob medida como SaaS, Landing Pages de alto impacto e sistemas corporativos, além de prestar consultoria técnica para acelerar e blindar a engenharia da sua empresa.">
+  <meta name="theme-color" content="#070709">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hydra One — Desenvolvimento de Software & Consultoria">
+  <meta property="og:description"
+    content="Construímos SaaS, Landing Pages de alta conversão, sistemas corporativos e prestamos consultoria técnica sênior para times de desenvolvimento.">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       Header & Floating Glassmorphism Navigation
+       ========================================================================== -->
+  <header class="header-wrapper" id="main-header">
+    <nav class="navbar" aria-label="Navegação Principal">
+      <a href="#hero" class="logo-brand" id="brand-logo">
+        <!-- Modern Geometric Hydra SVG Logo -->
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 3L27.2583 9.5V22.5L16 29L4.74167 22.5V9.5L16 3Z" stroke="url(#hydra-grad)" stroke-width="2.2"
+            stroke-linejoin="round" />
+          <path d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" stroke="#a855f7" stroke-width="1.8"
+            stroke-linejoin="round" />
+          <circle cx="16" cy="15" r="2.5" fill="#ffffff" />
+          <defs>
+            <linearGradient id="hydra-grad" x1="4.74" y1="3" x2="27.25" y2="29" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#ffffff" />
+              <stop offset="0.5" stop-color="#a855f7" />
+              <stop offset="1" stop-color="#6366f1" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Hydra</span>
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="#about">Quem Somos</a></li>
+        <li class="nav-item"><a href="#solutions">O Que Fazemos</a></li>
+        <li class="nav-item"><a href="#consulting">Consultoria</a></li>
+        <li class="nav-item"><a href="#showcase">Stack & Código</a></li>
+        <li class="nav-item"><a href="#how-it-works">Metodologia</a></li>
+        <li class="nav-item"><a href="#pricing">Investimento</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" data-action="open-consultation" id="nav-cta-btn">
+          <span>Iniciar Projeto</span>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="2" y1="8" x2="14" y2="8"></line>
+            <polyline points="9 3 14 8 9 13"></polyline>
+          </svg>
+        </button>
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Abrir menu mobile">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Drawer (Oculto no Desktop) -->
+  <div class="mobile-menu" id="mobile-menu-drawer">
+    <a href="#about">Quem Somos</a>
+    <a href="#solutions">O Que Fazemos</a>
+    <a href="#consulting">Consultoria</a>
+    <a href="#showcase">Stack & Código</a>
+    <a href="#how-it-works">Metodologia</a>
+    <a href="#pricing">Investimento</a>
+    <button class="btn btn-primary" data-action="open-consultation" style="width: 100%; margin-top: 8px;">
+      <span>Iniciar Projeto</span>
+    </button>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="announcement-badge">
+              <span class="dot"></span>
+              <span class="badge-tag">Software House & Consultoria:</span>
+              <span>Engenharia de Alto Padrão</span>
+            </div>
+
+            <h1 class="hero-title">
+              Desenvolvemos seu próximo <span class="text-gradient">SaaS, Landing Page e Sistema</span> sob medida.
+            </h1>
+
+            <p class="hero-subtitle">
+              A <strong>Hydra</strong> é uma empresa de tecnologia focada em criar produtos digitais de alto impacto —
+              de plataformas SaaS escaláveis e landing pages de altíssima conversão a sistemas corporativos complexos,
+              além de prestar consultoria técnica especializada para o seu time.
+            </p>
+
+            <div class="hero-cta-group">
+              <button class="btn btn-primary" data-action="open-consultation" id="hero-primary-cta">
+                <span>Solicitar Orçamento</span>
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="2" y1="8" x2="14" y2="8"></line>
+                  <polyline points="9 3 14 8 9 13"></polyline>
+                </svg>
+              </button>
+
+              <a href="#solutions" class="btn btn-secondary" id="hero-secondary-cta">
+                <span>Ver o que Desenvolvemos</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero 3D Metallic Cubes Visual (Fundo Transparente) -->
+          <div class="hero-visual">
+            <div class="visual-ambient-glow"></div>
+            <div class="hero-image-wrapper">
+              <img src="assets/images/hero-cubes.png" alt="Composição 3D de blocos de obsidiana e cromo da Hydra"
+                class="hero-3d-img" width="520" height="520">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Partners & Technologies Strip
+         ========================================================================== -->
+    <section class="partners-section">
+      <div class="container">
+        <p class="partners-title">Stack e ecossistema com tecnologias consolidadas de mercado</p>
+        <div class="partners-strip">
+          <div class="partner-logo" title="Next.js & React">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 1L24 22H0L12 1Z" />
+            </svg>
+            <span>Next.js</span>
+          </div>
+          <div class="partner-logo" title="Node.js & TypeScript">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+            <span>TypeScript</span>
+          </div>
+          <div class="partner-logo" title="Python">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20" />
+            </svg>
+            <span>Python & AI</span>
+          </div>
+          <div class="partner-logo" title="Go">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            <span>Golang</span>
+          </div>
+          <div class="partner-logo" title="PostgreSQL">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+            </svg>
+            <span>PostgreSQL</span>
+          </div>
+          <div class="partner-logo" title="Stripe">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697.5 12.607.5 6.075.5 2.015 3.905 2.015 9.429c0 5.494 4.398 6.942 8.653 8.369 2.45.819 3.255 1.543 3.255 2.502 0 .973-.854 1.487-2.327 1.487-2.378 0-5.385-1.127-7.447-2.263L3.26 25.12c2.197 1.096 5.485 1.88 8.89 1.88 6.837 0 11.233-3.23 11.233-9.012 0-5.69-4.237-7.25-9.407-8.838z" />
+            </svg>
+            <span>Stripe Billing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT HYDRA (Quem é a Hydra e o que nos diferencia)
+         ========================================================================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="dot"></span>
+            <span>Quem Somos</span>
+          </div>
+          <h2 class="section-title">
+            O que é a Hydra e <span class="text-purple">como geramos valor</span>
+          </h2>
+          <p class="section-description">
+            Não entregamos templates prontos ou códigos descartáveis. Atuamos como o braço tecnológico estratégico que
+            converte regras de negócio em produtos digitais rentáveis, seguros e de alto desempenho.
+          </p>
+        </div>
+
+        <div class="about-intro-grid">
+          <div>
+            <p class="about-text-lead">
+              A Hydra nasceu para unir dois mundos que raramente se encontram: <strong>design de nível internacional com
+                acabamento impecável</strong> e <strong>engenharia de software robusta, sem dívida técnica</strong>.
+            </p>
+            <p class="about-text-sub">
+              Seja para tirar um novo SaaS do papel, desenvolver uma landing page com taxa de conversão fora da curva,
+              construir um sistema web para automatizar sua empresa ou auditar sua arquitetura atual, entregamos com
+              metodologia ágil e transparência total em cada linha de código.
+            </p>
+          </div>
+
+          <div class="about-stats-strip">
+            <div class="about-stat-box">
+              <div class="about-stat-num">100%</div>
+              <div class="about-stat-label">Código proprietário entregue sem amarras ou royalties</div>
+            </div>
+            <div class="about-stat-box">
+              <div class="about-stat-num">&lt; 1.2s</div>
+              <div class="about-stat-label">Tempo médio de carregamento com otimização máxima</div>
+            </div>
+            <div class="about-stat-box">
+              <div class="about-stat-num">15 Dias</div>
+              <div class="about-stat-label">Para os primeiros deploys em ambiente de homologação</div>
+            </div>
+            <div class="about-stat-box">
+              <div class="about-stat-num">SLA Sênior</div>
+              <div class="about-stat-label">Acompanhamento direto por desenvolvedores e arquitetos</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Pillars Grid -->
+        <div class="about-pillars-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Engenharia Limpa & Escalável</h3>
+            <p class="feature-text">
+              Arquitetura modular, tipagem estrita, testes automatizados e esteiras de CI/CD que permitem ao seu
+              software
+              crescer sem quebrar.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                <path d="M2 12h20"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Design com Cara de $100k</h3>
+            <p class="feature-text">
+              Identidade visual moderna, micro-interações fluidas e responsividade em qualquer tela, gerando percepção
+              de valor imediata no seu público.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Foco em Retorno de Negócio</h3>
+            <p class="feature-text">
+              Não programamos no vazio: desenhamos fluxos de checkout, onboarding de usuários e dashboards voltados para
+              reduzir custos e aumentar receita.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Entrega sem Surpresas</h3>
+            <p class="feature-text">
+              Prazos calculados com rigor, documentação técnica entregue em mãos e acompanhamento direto via canal
+              dedicado sem intermediários.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WHAT WE DEVELOP (SaaS, Landing Pages, Sistemas Web e APIs)
+         ========================================================================== -->
+    <section class="products-section" id="solutions">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="dot"></span>
+            <span>Desenvolvimento de Software</span>
+          </div>
+          <h2 class="section-title">
+            O que construímos para o seu <span class="text-purple">negócio digital</span>
+          </h2>
+          <p class="section-description">
+            Do design da interface até o deploy final em produção: desenvolvemos softwares sob medida com qualidade de
+            agência de ponta e rigor de engenharia.
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <!-- Solution 1: SaaS Completo -->
+          <div class="product-card">
+            <div class="product-tag saas">Plataforma SaaS</div>
+            <h3 class="product-title">Desenvolvimento de SaaS</h3>
+            <p class="product-desc">
+              Criação completa da sua plataforma de software como serviço: arquitetura multi-tenant, billing por
+              assinatura, autenticação segura e dashboards analíticos de alta conversão.
+            </p>
+            <ul class="product-features-list">
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span>Cobranças e planos recorrentes com Stripe, Asaas ou Pagar.me</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span>Controle de permissões (RBAC), multi-tenancy e auditoria</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span>Painel administrativo para gestão de usuários, faturamento e métricas</span>
+              </li>
+            </ul>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="product-price-val">Sob Escopo</span>
+                <span class="product-price-sub">MVP ou Produto Completo</span>
+              </div>
+              <button class="btn btn-primary" data-action="open-consultation"
+                style="padding: 8px 16px; font-size: 0.8125rem;">Orçar SaaS</button>
+            </div>
+          </div>
+
+          <!-- Solution 2: Landing Pages de Alto Impacto -->
+          <div class="product-card">
+            <div class="product-tag lp">Landing Page & Sites</div>
+            <h3 class="product-title">Landing Pages de Alto Impacto</h3>
+            <p class="product-desc">
+              Páginas de vendas e institucionais projetadas com padrão visual internacional ($100k agency quality),
+              velocidade extrema de carregamento e foco brutal em conversão de leads e clientes.
+            </p>
+            <ul class="product-features-list">
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span>Design exclusivo desenhado para a sua marca (zero temas prontos)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span>Performance máxima: pontuação 95+ no Google Lighthouse</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span>Integração direta com CRMs, WhatsApp, analytics e pixel de conversão</span>
+              </li>
+            </ul>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="product-price-val">Entrega Rápida</span>
+                <span class="product-price-sub">Design + Copywriting + Dev</span>
+              </div>
+              <button class="btn btn-secondary" data-action="open-consultation"
+                style="padding: 8px 16px; font-size: 0.8125rem;">Orçar LP</button>
+            </div>
+          </div>
+
+          <!-- Solution 3: Sistemas Web & ERPs/CRMs Customizados -->
+          <div class="product-card">
+            <div class="product-tag system">Sistemas & Portais</div>
+            <h3 class="product-title">Sistemas Web & Dashboards</h3>
+            <p class="product-desc">
+              Softwares operacionais e plataformas internas customizadas para o fluxo único da sua empresa: elimine
+              planilhas manuais, automatize processos e ganhe visibilidade total em tempo real.
+            </p>
+            <ul class="product-features-list">
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span>Portais para clientes, fornecedores ou equipe interna</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span>Automação de rotinas com emissão de relatórios, PDFs e exportações</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span>APIs REST/GraphQL para integração com ERPs e ferramentas externas</span>
+              </li>
+            </ul>
+            <div class="product-footer">
+              <div class="product-price">
+                <span class="product-price-val">Sob Medida</span>
+                <span class="product-price-sub">Escopo fechado ou ágil</span>
+              </div>
+              <button class="btn btn-secondary" data-action="open-consultation"
+                style="padding: 8px 16px; font-size: 0.8125rem;">Orçar Sistema</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SOFTWARE CONSULTING SECTION (Consultoria Técnica Especializada)
+         ========================================================================== -->
+    <section class="features-section" id="consulting">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="dot"></span>
+            <span>Consultoria Técnica</span>
+          </div>
+          <h2 class="section-title">Consultoria em Engenharia de Software & Arquitetura</h2>
+          <p class="section-description">
+            Precisa destravar um projeto que parou, resolver lentidões no sistema ou alocar engenheiros sêniores para
+            entregar prazos urgentes? Nossa consultoria entra em campo com soluções práticas.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="22" y1="12" x2="18" y2="12"></line>
+                <line x1="6" y1="12" x2="2" y2="12"></line>
+                <line x1="12" y1="6" x2="12" y2="2"></line>
+                <line x1="12" y1="22" x2="12" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Auditoria de Código & Diagnóstico</h3>
+            <p class="feature-text">
+              Análise profunda do seu repositório para mapear gargalos de banco de dados, falhas graves de segurança,
+              vazamento de memória e propor um plano de ação claro de refatoração.
+            </p>
+            <button class="feature-link" data-action="open-consultation"
+              style="background: none; border: none; cursor: pointer; padding: 0;">
+              <span>Solicitar Diagnóstico</span>
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 6H10M7 3L10 6L7 9" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Squads Dedicadas & Alocação Sênior</h3>
+            <p class="feature-text">
+              Acelere a entrega do seu roadmap com desenvolvedores Fullstack sêniores e Tech Leads que se integram
+              imediatamente ao seu fluxo de trabalho, sem curva de aprendizado demorada.
+            </p>
+            <button class="feature-link" data-action="open-consultation"
+              style="background: none; border: none; cursor: pointer; padding: 0;">
+              <span>Alocar Desenvolvedores</span>
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 6H10M7 3L10 6L7 9" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Modernização de Sistemas Legados</h3>
+            <p class="feature-text">
+              Transição segura e gradual de códigos legados ou sistemas lentos para arquiteturas modernas na nuvem, com
+              garantia de continuidade operacional e zero tempo de inatividade.
+            </p>
+            <button class="feature-link" data-action="open-consultation"
+              style="background: none; border: none; cursor: pointer; padding: 0;">
+              <span>Planejar Modernização</span>
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 6H10M7 3L10 6L7 9" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Advisory Técnico & Mentoria</h3>
+            <p class="feature-text">
+              Apoio estratégico para CTOs, fundadores e líderes de produto na escolha de tecnologias, desenho de
+              arquitetura, redução de custos de nuvem (FinOps) e governança técnica.
+            </p>
+            <button class="feature-link" data-action="open-consultation"
+              style="background: none; border: none; cursor: pointer; padding: 0;">
+              <span>Falar com Tech Lead</span>
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 6H10M7 3L10 6L7 9" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Technical Showcase (Interactive Sandbox)
+         ========================================================================== -->
+    <section class="showcase-section" id="showcase">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="dot"></span>
+            <span>Rigor de Engenharia</span>
+          </div>
+          <h2 class="section-title">
+            Código limpo, seguro e <span class="text-purple">pronto para produção</span>
+          </h2>
+          <p class="section-description">
+            Veja na prática a estrutura que utilizamos no desenvolvimento dos nossos SaaS, integrações e backends.
+            Arquitetura moderna, tipagem rigorosa e facilidade de manutenção.
+          </p>
+        </div>
+
+        <!-- Language Tabs Bar -->
+        <div class="tech-tabs-wrapper">
+          <div class="tech-tabs-bar" role="tablist">
+            <button class="tab-btn active" data-lang="typescript" role="tab" id="tab-ts">
+              <span>TypeScript / Next.js</span>
+            </button>
+            <button class="tab-btn" data-lang="go" role="tab" id="tab-go">
+              <span>Go</span>
+            </button>
+            <button class="tab-btn" data-lang="python" role="tab" id="tab-py">
+              <span>Python</span>
+            </button>
+            <button class="tab-btn" data-lang="rust" role="tab" id="tab-rs">
+              <span>Rust</span>
+            </button>
+            <button class="tab-btn" data-lang="csharp" role="tab" id="tab-cs">
+              <span>C# (.NET)</span>
+            </button>
+            <button class="tab-btn" data-lang="java" role="tab" id="tab-java">
+              <span>Java</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive Terminal Sandbox -->
+        <div class="code-sandbox-container">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot close"></span>
+              <span class="terminal-dot min"></span>
+              <span class="terminal-dot max"></span>
+            </div>
+            <div class="terminal-filename" id="code-filename">app/api/saas/subscription/route.ts</div>
+            <button class="btn-copy-code" id="btn-copy" aria-label="Copiar código">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copiar</span>
+            </button>
+          </div>
+
+          <div class="code-editor-body" id="code-content">
+            <pre><code><span class="code-line"><span class="line-number">1</span><span class="line-code"><span class="syn-kw">import</span> { <span class="syn-type">NextResponse</span> } <span class="syn-kw">from</span> <span class="syn-str">'next/server'</span>;</span></span>
+<span class="code-line"><span class="line-number">2</span><span class="line-code"><span class="syn-kw">import</span> { <span class="syn-prop">auth</span> } <span class="syn-kw">from</span> <span class="syn-str">'@/lib/auth'</span>;</span></span>
+<span class="code-line"><span class="line-number">3</span><span class="line-code"><span class="syn-kw">import</span> { <span class="syn-prop">prisma</span> } <span class="syn-kw">from</span> <span class="syn-str">'@/lib/prisma'</span>;</span></span>
+<span class="code-line"><span class="line-number">4</span><span class="line-code"><span class="syn-kw">import</span> { <span class="syn-prop">stripe</span> } <span class="syn-kw">from</span> <span class="syn-str">'@/lib/stripe'</span>;</span></span>
+<span class="code-line"><span class="line-number">5</span><span class="line-code"></span></span>
+<span class="code-line"><span class="line-number">6</span><span class="line-code"><span class="syn-comment">// End-to-end SaaS Multi-Tenant Provisioning</span></span></span>
+<span class="code-line"><span class="line-number">7</span><span class="line-code"><span class="syn-kw">export async function</span> <span class="syn-fn">POST</span>(<span class="syn-prop">req</span>: <span class="syn-type">Request</span>) {</span></span>
+<span class="code-line"><span class="line-number">8</span><span class="line-code">  <span class="syn-kw">const</span> <span class="syn-prop">session</span> = <span class="syn-kw">await</span> <span class="syn-fn">auth</span>();</span></span>
+<span class="code-line"><span class="line-number">9</span><span class="line-code">  <span class="syn-kw">if</span> (!<span class="syn-prop">session</span>?.<span class="syn-prop">tenantId</span>) <span class="syn-kw">return new</span> <span class="syn-fn">NextResponse</span>(<span class="syn-str">'Unauthorized'</span>, { <span class="syn-prop">status</span>: <span class="syn-num">401</span> });</span></span>
+<span class="code-line"><span class="line-number">10</span><span class="line-code"></span></span>
+<span class="code-line"><span class="line-number">11</span><span class="line-code">  <span class="syn-kw">const</span> { <span class="syn-prop">planId</span> } = <span class="syn-kw">await</span> <span class="syn-prop">req</span>.<span class="syn-fn">json</span>();</span></span>
+<span class="code-line"><span class="line-number">12</span><span class="line-code">  <span class="syn-kw">const</span> <span class="syn-prop">checkout</span> = <span class="syn-kw">await</span> <span class="syn-prop">stripe</span>.<span class="syn-prop">checkout</span>.<span class="syn-prop">sessions</span>.<span class="syn-fn">create</span>({</span></span>
+<span class="code-line"><span class="line-number">13</span><span class="line-code">    <span class="syn-prop">customer</span>: <span class="syn-prop">session</span>.<span class="syn-prop">user</span>.<span class="syn-prop">stripeCustomerId</span>,</span></span>
+<span class="code-line"><span class="line-number">14</span><span class="line-code">    <span class="syn-prop">mode</span>: <span class="syn-str">'subscription'</span>,</span></span>
+<span class="code-line"><span class="line-number">15</span><span class="line-code">    <span class="syn-prop">line_items</span>: [{ <span class="syn-prop">price</span>: <span class="syn-prop">planId</span>, <span class="syn-prop">quantity</span>: <span class="syn-num">1</span> }],</span></span>
+<span class="code-line"><span class="line-number">16</span><span class="line-code">    <span class="syn-prop">metadata</span>: { <span class="syn-prop">tenantId</span>: <span class="syn-prop">session</span>.<span class="syn-prop">tenantId</span> }</span></span>
+<span class="code-line"><span class="line-number">17</span><span class="line-code">  });</span></span>
+<span class="code-line"><span class="line-number">18</span><span class="line-code">  <span class="syn-kw">return</span> <span class="syn-type">NextResponse</span>.<span class="syn-fn">json</span>({ <span class="syn-prop">url</span>: <span class="syn-prop">checkout</span>.<span class="syn-prop">url</span> });</span></span>
+<span class="code-line"><span class="line-number">19</span><span class="line-code">}</span></span></code></pre>
+          </div>
+
+          <div class="terminal-footer">
+            <div class="terminal-status">
+              <span class="terminal-status-dot"></span>
+              <span id="code-status-text">Next.js 15 App Router • TypeScript • Stripe Billing</span>
+            </div>
+            <span>Padrão Corporativo • 100% Testado</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HOW IT WORKS (Metodologia em 3 Fases com os 3D Renders)
+         ========================================================================== -->
+    <section class="how-it-works-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="dot"></span>
+            <span>Como Trabalhamos</span>
+          </div>
+          <h2 class="section-title">Nossa metodologia de entrega em 3 fases</h2>
+          <p class="section-description">
+            Processo ágil, estruturado e transparente. Você acompanha cada evolução em tempo real, sem reuniões
+            intermináveis ou atrasos de entrega.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-image-container">
+              <img src="assets/images/step-1-cube.jpg" alt="Objeto 3D cubo de obsidiana com esfera interna" width="300"
+                height="300" loading="lazy">
+            </div>
+            <div class="step-badge">Fase 01</div>
+            <h3 class="step-title">1. Imersão, Escopo & Prototipação</h3>
+            <p class="step-desc">
+              Alinhamos regras de negócio, modelamos a arquitetura do banco e criamos protótipos interativos em Figma
+              para validar o design antes de escrever a primeira linha de código.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-image-container">
+              <img src="assets/images/step-2-polyhedron.jpg"
+                alt="Objeto 3D poliedro geodésico de obsidiana com nós de cromo" width="300" height="300"
+                loading="lazy">
+            </div>
+            <div class="step-badge">Fase 02</div>
+            <h3 class="step-title">2. Desenvolvimento Ágil & Sprints</h3>
+            <p class="step-desc">
+              Construção do software em sprints com deploys contínuos em ambiente de homologação. Você testa as
+              funcionalidades semanalmente e acompanha o progresso real.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-image-container">
+              <img src="assets/images/step-3-hollow-cube.jpg" alt="Objeto 3D cubo perfurado em preto fosco e cromo"
+                width="300" height="300" loading="lazy">
+            </div>
+            <div class="step-badge">Fase 03</div>
+            <h3 class="step-title">3. Homologação, Lançamento & Suporte</h3>
+            <p class="step-desc">
+              Testes automatizados de carga, configuração da infraestrutura em nuvem, publicação e garantia técnica com
+              suporte contínuo para evolução do produto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PRICING & ENGAGEMENT MODELS (Alternador: Projetos vs Consultoria)
+         ========================================================================== -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="dot"></span>
+            <span>Modelos de Contratação</span>
+          </div>
+          <h2 class="section-title">
+            Formatos flexíveis de <span class="text-purple">investimento e parceria</span>
+          </h2>
+          <p class="section-description">
+            Escolha o modelo ideal para a sua necessidade: desenvolvimento de projetos sob medida ou consultoria técnica
+            com engenheiros sêniores dedicados.
+          </p>
+        </div>
+
+        <!-- Interactive Toggle between Projects & Consulting -->
+        <div class="offering-toggle-wrapper">
+          <div class="offering-toggle" role="tablist">
+            <button class="offering-btn active" data-target="panel-products" id="btn-tab-products" role="tab">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                </path>
+              </svg>
+              <span>Desenvolvimento de Software (SaaS / LP / Sistemas)</span>
+            </button>
+            <button class="offering-btn" data-target="panel-consulting" id="btn-tab-consulting" role="tab">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <span>Consultoria em Desenvolvimento</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Panel 1: Software Projects -->
+        <div class="pricing-panel active" id="panel-products">
+          <div class="pricing-grid">
+            <!-- Project Plan 1: Landing Page Premium -->
+            <div class="pricing-card">
+              <div class="plan-header">
+                <h3 class="plan-name">Landing Page de Alto Impacto</h3>
+                <p class="plan-desc">Para lançamentos, validação de produtos e marcas que exigem autoridade visual
+                  imediata.</p>
+              </div>
+              <div class="plan-price-box">
+                <span class="plan-price-num">Sob Consulta</span>
+                <span class="plan-price-period">/ projeto fechado</span>
+              </div>
+              <ul class="plan-features">
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Design exclusivo com acabamento ultra-premium</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Copywriting estratégico persuasivo focado em conversão</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>SEO técnico otimizado e integração com CRMs / WhatsApp</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Entrega rápida em ambiente de produção</span>
+                </li>
+              </ul>
+              <button class="btn btn-secondary" data-action="open-consultation" style="width: 100%;">Solicitar
+                Orçamento de LP</button>
+            </div>
+
+            <!-- Project Plan 2: SaaS MVP / Plataforma (Featured) -->
+            <div class="pricing-card featured">
+              <span class="pricing-badge">Mais Procurado</span>
+              <div class="plan-header">
+                <h3 class="plan-name">SaaS / Plataforma Web</h3>
+                <p class="plan-desc">Desenvolvimento completo do seu software como serviço pronto para receber os
+                  primeiros clientes pagantes.</p>
+              </div>
+              <div class="plan-price-box">
+                <span class="plan-price-num">Sob Escopo</span>
+                <span class="plan-price-period">/ entregas quinzenais</span>
+              </div>
+              <ul class="plan-features">
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Frontend moderno e responsivo em Next.js / React</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Autenticação completa, sessões seguras e multi-tenancy</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Integração de checkout de assinaturas (Stripe / gateways locais)</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Painel do usuário, área admin e infraestrutura configurada</span>
+                </li>
+              </ul>
+              <button class="btn btn-primary" data-action="open-consultation" style="width: 100%;">Conversar sobre meu
+                SaaS</button>
+            </div>
+
+            <!-- Project Plan 3: Sistema Corporativo Enterprise -->
+            <div class="pricing-card">
+              <div class="plan-header">
+                <h3 class="plan-name">Sistema Web Corporativo</h3>
+                <p class="plan-desc">ERPs, CRMs e plataformas internas para operacionalizar e automatizar empresas em
+                  expansão.</p>
+              </div>
+              <div class="plan-price-box">
+                <span class="plan-price-num">Enterprise</span>
+                <span class="plan-price-period">/ sob medida</span>
+              </div>
+              <ul class="plan-features">
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Módulos customizados para suas regras de negócio</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Integração com bancos existentes e sistemas legados</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Controle rígido de acessos, logs de auditoria e LGPD</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Treinamento do time interno e documentação viva</span>
+                </li>
+              </ul>
+              <button class="btn btn-secondary" data-action="open-consultation" style="width: 100%;">Agendar Reunião de
+                Escopo</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Consulting Services -->
+        <div class="pricing-panel" id="panel-consulting">
+          <div class="pricing-grid">
+            <!-- Consulting Plan 1: Auditoria & Diagnóstico -->
+            <div class="pricing-card">
+              <div class="plan-header">
+                <h3 class="plan-name">Auditoria & Diagnóstico Técnico</h3>
+                <p class="plan-desc">Mapeamento minucioso do seu repositório para destravar lentidões, bugs e dívida
+                  técnica.</p>
+              </div>
+              <div class="plan-price-box">
+                <span class="plan-price-num">Sprint Única</span>
+                <span class="plan-price-period">/ diagnóstico intensivo</span>
+              </div>
+              <ul class="plan-features">
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Análise minuciosa de consultas de banco de dados e gargalos</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Verificação de vulnerabilidades de segurança e injeções</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Relatório executivo + Plano de refatoração passo a passo</span>
+                </li>
+              </ul>
+              <button class="btn btn-secondary" data-action="open-consultation" style="width: 100%;">Contratar
+                Auditoria</button>
+            </div>
+
+            <!-- Consulting Plan 2: Squad Dedicado Sênior (Featured) -->
+            <div class="pricing-card featured">
+              <span class="pricing-badge">Mais Procurado</span>
+              <div class="plan-header">
+                <h3 class="plan-name">Squad Sênior Dedicado</h3>
+                <p class="plan-desc">Engenheiros sêniores integrados ao seu time para acelerar entregas críticas do seu
+                  produto.</p>
+              </div>
+              <div class="plan-price-box">
+                <span class="plan-price-num">Mensal</span>
+                <span class="plan-price-period">/ alocação por sprint</span>
+              </div>
+              <ul class="plan-features">
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Engenheiros Fullstack sêniores com liderança de Tech Lead</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Integração imediata aos rituais ágeis (Scrum/Kanban) do cliente</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Entrega contínua de código com testes e revisão técnica</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Sem custos trabalhistas de contratação ou demissão</span>
+                </li>
+              </ul>
+              <button class="btn btn-primary" data-action="open-consultation" style="width: 100%;">Alocar Squad
+                Agora</button>
+            </div>
+
+            <!-- Consulting Plan 3: Advisory para CTOs -->
+            <div class="pricing-card">
+              <div class="plan-header">
+                <h3 class="plan-name">Advisory para Líderes & CTOs</h3>
+                <p class="plan-desc">Mentoria e acompanhamento estratégico contínuo para decisões técnicas de alta
+                  relevância.</p>
+              </div>
+              <div class="plan-price-box">
+                <span class="plan-price-num">Acompanhamento</span>
+                <span class="plan-price-period">/ reuniões semanais</span>
+              </div>
+              <ul class="plan-features">
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Revisão arquitetural de decisões de stack e infraestrutura</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Otimização de custos de computação em nuvem (FinOps)</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Canal direto com arquiteto sênior para suporte a incidentes</span>
+                </li>
+              </ul>
+              <button class="btn btn-secondary" data-action="open-consultation" style="width: 100%;">Agendar
+                Alinhamento</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TESTIMONIALS & CLIENT FEEDBACK
+         ========================================================================== -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="dot"></span>
+            <span>Casos Reais</span>
+          </div>
+          <h2 class="section-title">
+            O que dizem quem contratou o <span class="text-purple">desenvolvimento e a consultoria</span> da Hydra
+          </h2>
+          <p class="section-description">
+            De founders de startups a diretores de tecnologia: resultados tangíveis entregues em prazo recorde.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-metric-badge">+380% Conversão de Leads</div>
+            <p class="testimonial-quote">
+              "A Hydra refez toda a nossa Landing Page e a esteira de onboarding. A autoridade visual que a página
+              passou
+              foi absurda e nossa taxa de conversão quase quadruplicou logo no primeiro mês."
+            </p>
+            <div class="testimonial-author">
+              <img src="assets/images/avatar-1.jpg" alt="Mariana Vasconcelos" class="author-avatar" width="42"
+                height="42">
+              <div class="author-info">
+                <h4>Mariana Vasconcelos</h4>
+                <p>Founder & Head de Crescimento na NexaPay</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-metric-badge">MVP em 6 Semanas</div>
+            <p class="testimonial-quote">
+              "Precisávamos lançar nosso SaaS com urgência para validar com investidores. O time da Hydra entregou o
+              sistema completo com Stripe e dashboard funcionando perfeitamente dentro do prazo."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-initials">CB</div>
+              <div class="author-info">
+                <h4>Carlos Barbosa</h4>
+                <p>CEO na FlowOps Analytics</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-metric-badge">-75% Dívida Técnica</div>
+            <p class="testimonial-quote">
+              "Contratamos a consultoria técnica para diagnosticar nossa API legada que travava nos picos. Em poucas
+              semanas de squad integrada, a estabilidade foi recuperada e os custos de servidor despencaram."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-initials">RA</div>
+              <div class="author-info">
+                <h4>Rodrigo Albuquerque</h4>
+                <p>CTO na LogiScale</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="testimonial-metric-badge">100% Automação Interna</div>
+            <p class="testimonial-quote">
+              "O sistema customizado desenvolvido pela Hydra substituiu mais de 10 planilhas dispersas e centralizou
+              toda
+              a operação da nossa empresa. O ganho de produtividade foi imenso."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-initials">CD</div>
+              <div class="author-info">
+                <h4>Camila Duarte</h4>
+                <p>Diretora de Operações na DataCore</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Pre-Footer High-Impact CTA Banner
+         ========================================================================== -->
+    <section class="prefooter-section">
+      <div class="container">
+        <div class="prefooter-banner">
+          <h2 class="prefooter-title">Tem uma ideia ou um sistema que precisa de engenharia sênior?</h2>
+          <p class="prefooter-subtitle">
+            Converse com nossos especialistas. Avaliaremos o escopo do seu SaaS, landing page, sistema ou desafio
+            técnico
+            sem compromisso.
+          </p>
+          <div class="prefooter-actions">
+            <button class="btn btn-primary" data-action="open-consultation" id="prefooter-cta-btn">
+              <span>Falar sobre meu Projeto</span>
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="2" y1="8" x2="14" y2="8"></line>
+                <polyline points="9 3 14 8 9 13"></polyline>
+              </svg>
+            </button>
+            <a href="#solutions" class="btn btn-secondary">Conhecer Soluções</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="logo-brand">
+            <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+              <path d="M16 3L27.2583 9.5V22.5L16 29L4.74167 22.5V9.5L16 3Z" stroke="url(#hydra-grad-foot)"
+                stroke-width="2.2" />
+              <path d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" stroke="#a855f7" stroke-width="1.8" />
+              <circle cx="16" cy="15" r="2.5" fill="#ffffff" />
+              <defs>
+                <linearGradient id="hydra-grad-foot" x1="4.74" y1="3" x2="27.25" y2="29" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ffffff" />
+                  <stop offset="0.5" stop-color="#a855f7" />
+                  <stop offset="1" stop-color="#6366f1" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>Hydra</span>
+          </a>
+          <p>
+            Desenvolvimento de software de alta performance — SaaS, Landing Pages e Sistemas sob medida — e consultoria
+            técnica sênior para empresas.
+          </p>
+          <div class="system-status-pill">
+            <span class="status-dot-pulse"></span>
+            <span>Squads ativas e disponibilidade para novos projetos</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Desenvolvimento</h4>
+          <ul class="footer-links">
+            <li><a href="#solutions">Plataformas SaaS</a></li>
+            <li><a href="#solutions">Landing Pages de Alto Impacto</a></li>
+            <li><a href="#solutions">Sistemas Web & ERPs</a></li>
+            <li><a href="#solutions">APIs & Microsserviços</a></li>
+            <li><a href="#pricing">Planos de Projetos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Consultoria</h4>
+          <ul class="footer-links">
+            <li><a href="#consulting">Auditoria de Código</a></li>
+            <li><a href="#consulting">Alocação de Squad Sênior</a></li>
+            <li><a href="#consulting">Modernização de Legado</a></li>
+            <li><a href="#consulting">Advisory Técnico para CTOs</a></li>
+            <li><a href="#pricing">Modelos de Consultoria</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>A Empresa</h4>
+          <ul class="footer-links">
+            <li><a href="#about">Quem É a Hydra</a></li>
+            <li><a href="#how-it-works">Nossa Metodologia</a></li>
+            <li><a href="#showcase">Stack de Engenharia</a></li>
+            <li><a href="#testimonials">Casos de Sucesso</a></li>
+            <li><a href="#footer">Contato Direto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Segurança & Garantia</h4>
+          <ul class="footer-links">
+            <li><a href="#footer">Código 100% Proprietário</a></li>
+            <li><a href="#footer">Acordo de Confidencialidade (NDA)</a></li>
+            <li><a href="#footer">Contrato & SLA Garantido</a></li>
+            <li><a href="#footer">Conformidade com LGPD</a></li>
+            <li><a href="#footer">Suporte Pós-Lançamento</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Hydra — Desenvolvimento de Software & Consultoria Técnica. Todos os direitos reservados.</p>
+        <div class="footer-socials">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Project & Consultation Request Modal (Lead Capture)
+       ========================================================================== -->
+  <div class="modal-overlay" id="consultation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close-btn" aria-label="Fechar modal">✕</button>
+
+      <div id="consultation-form-wrapper">
+        <div class="modal-header">
+          <div class="section-badge" style="margin-bottom: 12px;">
+            <span class="dot"></span>
+            <span>Atendimento Personalizado</span>
+          </div>
+          <h3 class="modal-title" id="modal-title">Iniciar um Projeto com a Hydra</h3>
+          <p class="modal-desc">Conte-nos sobre o que você deseja construir ou o desafio técnico da sua equipe.</p>
+        </div>
+
+        <form id="consultation-form">
+          <div class="form-group">
+            <label for="lead-name">Seu Nome Completo</label>
+            <input type="text" id="lead-name" class="form-input" placeholder="Ex: Alex Rivera" required>
+          </div>
+
+          <div class="form-group">
+            <label for="lead-email">E-mail de Contato / Corporativo</label>
+            <input type="email" id="lead-email" class="form-input" placeholder="alex@empresa.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="lead-company">Empresa, Startup ou Projeto</label>
+            <input type="text" id="lead-company" class="form-input" placeholder="Ex: Minha Empresa / Startup" required>
+          </div>
+
+          <div class="form-group">
+            <label for="lead-scope">Tipo de Projeto ou Necessidade</label>
+            <select id="lead-scope" class="form-select" required>
+              <option value="saas">Desenvolvimento de SaaS / Plataforma Web</option>
+              <option value="lp">Criação de Landing Page de Alto Impacto / Site</option>
+              <option value="system">Sistema Web Customizado (ERP, CRM, Portal Interno)</option>
+              <option value="consulting-audit">Consultoria: Auditoria de Código & Diagnóstico Técnico</option>
+              <option value="consulting-squads">Consultoria: Alocação de Squad Sênior Dedicado</option>
+              <option value="migration">Modernização de Sistema Legado / Refatoração</option>
+              <option value="other">Outro Projeto Sob Medida</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="lead-notes">Descreva seu Projeto ou Desafio (Opcional)</label>
+            <textarea id="lead-notes" class="form-textarea"
+              placeholder="Ex: Queremos criar um SaaS de gestão financeira com cobrança Stripe, ou precisamos refatorar nosso backend..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px 24px;">
+            <span>Solicitar Orçamento / Diagnóstico</span>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="2" y1="8" x2="14" y2="8"></line>
+              <polyline points="9 3 14 8 9 13"></polyline>
+            </svg>
+          </button>
+        </form>
+
+        <div class="modal-feedback" id="modal-success-feedback">
+          <div
+            style="width: 56px; height: 56px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; color: #10b981;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; color: #fff;">Mensagem Recebida com
+            Sucesso!</h4>
+          <p style="font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">
+            Nossa equipe técnica entrará em contato em até 24 horas úteis com o direcionamento do seu projeto ou
+            agendamento de reunião de escopo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
