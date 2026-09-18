@@ -3,6 +3,27 @@
  * Enterprise Software Development & Architecture Consulting
  */
 
+/* ==========================================================================
+   WhatsApp Contact Configuration
+   Configure seu telefone e mensagens padrão da Hydra One
+   ========================================================================== */
+const WHATSAPP_CONFIG = {
+  // Número oficial com DDI e DDD (ex: 5511999999999)
+  phone: '5511999999999',
+  defaultMessage: 'Olá! Gostaria de conversar com a equipe da Hydra One sobre um projeto de desenvolvimento ou consultoria.'
+};
+
+/**
+ * Redireciona para o WhatsApp com mensagem customizada
+ * @param {string} [customMessage]
+ */
+function openWhatsApp(customMessage) {
+  const cleanPhone = WHATSAPP_CONFIG.phone.replace(/\D/g, '');
+  const text = encodeURIComponent(customMessage || WHATSAPP_CONFIG.defaultMessage);
+  const url = `https://wa.me/${cleanPhone}?text=${text}`;
+  window.open(url, '_blank', 'noopener,noreferrer');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initCodeShowcase();
@@ -10,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardGlowEffects();
   initMobileMenu();
   initOfferingToggle();
+  initWhatsAppTriggers();
 });
 
 /* ==========================================================================
@@ -288,15 +310,33 @@ function initConsultationModal() {
       e.preventDefault();
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
+
+      const name = document.querySelector('#lead-name')?.value.trim() || '';
+      const email = document.querySelector('#lead-email')?.value.trim() || '';
+      const company = document.querySelector('#lead-company')?.value.trim() || '';
+      const scopeEl = document.querySelector('#lead-scope');
+      const scope = scopeEl ? scopeEl.options[scopeEl.selectedIndex].text : '';
+      const notes = document.querySelector('#lead-notes')?.value.trim() || 'Sem observações adicionais.';
+
       submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Enviando diagnóstico...';
+      submitBtn.innerHTML = 'Abrindo WhatsApp...';
+
+      // Montar mensagem estruturada para o atendimento WhatsApp
+      const whatsappText = `*Novo Briefing de Projeto — Hydra One*\n\n` +
+        `👤 *Nome:* ${name}\n` +
+        `🏢 *Empresa:* ${company}\n` +
+        `📧 *E-mail:* ${email}\n` +
+        `🎯 *Necessidade:* ${scope}\n` +
+        `📝 *Detalhes do Projeto:* ${notes}\n\n` +
+        `_Olá! Preenchi o formulário no site e gostaria de agendar uma reunião de escopo com a Hydra One._`;
 
       setTimeout(() => {
+        openWhatsApp(whatsappText);
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
         form.style.display = 'none';
         if (feedback) feedback.classList.add('active');
-      }, 1000);
+      }, 500);
     });
   }
 }
@@ -315,9 +355,23 @@ function initMobileMenu() {
   });
 
   // Close menu when clicking outside or clicking any nav link
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
+  menu.querySelectorAll('a, button').forEach(item => {
+    item.addEventListener('click', () => {
       menu.classList.remove('active');
+    });
+  });
+}
+
+/* ==========================================================================
+   6. WhatsApp Event Triggers & Dynamic Link Sync
+   ========================================================================== */
+function initWhatsAppTriggers() {
+  const triggers = document.querySelectorAll('[data-action="open-whatsapp"]');
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const customMsg = trigger.getAttribute('data-whatsapp-msg') || WHATSAPP_CONFIG.defaultMessage;
+      openWhatsApp(customMsg);
     });
   });
 }

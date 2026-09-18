@@ -14,11 +14,13 @@ Esta landing page foi construída do zero seguindo os mais elevados padrões de 
 
 ## ✨ Principais Funcionalidades & Diferenciais
 
+- **Botão Flutuante do WhatsApp (FAB):** Botão fixo no canto inferior direito com pulso de radar dinâmico, tooltip informativo e redirecionamento direto para a conversa no WhatsApp.
+- **Integração Total de Contato via WhatsApp:** Todos os botões de ação e planos de contratação direcionam para o WhatsApp com mensagens de abertura personalizadas por serviço (SaaS, Landing Page, ERP Corporativo, Auditoria, Squad Sênior e Advisory).
+- **Briefing Inteligente no WhatsApp:** Modal de contato que coleta dados básicos do projeto (nome, empresa, escopo e detalhes) e monta automaticamente um briefing completo pronto para envio no WhatsApp.
 - **Design Obsidian Glassmorphism:** Estética visual futurista e sofisticada com paleta dark obsidian, reflexos em vidro, iluminação sutil de bordas e gradientes dinâmicos.
 - **Showcase Interativo de Código:** Alternador dinâmico de linguagens e stacks corporativas (Go, Python FastAPI, Rust, C# .NET 8 e Java Spring Boot 3) com syntax highlighting estilizado e cópia para área de transferência.
 - **Toggle Dinâmico de Ofertas (Projetos vs Consultoria):** Alternância instantânea de modelos de investimento (Preço Fixo por Escopo vs Alocação Sênior / Retainer Mensal).
 - **FAQ Interativo (Accordion):** Perguntas frequentes com animação suave de expansão e colapso via JavaScript.
-- **Modal de Captura de Leads:** Formulário de briefing e contato com validação nativa, feedback visual de envio e fechamento acessível (tecla `ESC`, clique externo ou botão fechar).
 - **Navegação Inteligente & Efeitos Visuais:** Header com efeito blur ao rolar a página, menu responsivo mobile e efeito glow radial que segue o cursor nos cards.
 - **100% Responsivo:** Layout fluído adaptado para smartphones, tablets e monitores ultrawide.
 - **Performance & SEO:** Código semântico leve, meta tags Open Graph completas e carregamento ultrarrápido sem dependência de bibliotecas externas pesadas.
@@ -95,6 +97,22 @@ As cores, fontes e variáveis globais do projeto estão centralizadas no arquivo
 - `--accent-purple` e `--accent-indigo`: Gradientes e destaques de ação.
 - `--font-sans`: Fonte principal aplicada na interface.
 - `--font-mono`: Fonte monoespaçada para blocos de código.
+
+---
+
+## 📱 Configuração do WhatsApp
+
+Para definir o número oficial de atendimento da **Hydra One**, abra o arquivo [`js/main.js`](js/main.js) e altere a constante no topo do arquivo:
+
+```javascript
+const WHATSAPP_CONFIG = {
+  // Informe o número com DDI e DDD (somente números)
+  phone: '5511999999999', 
+  defaultMessage: 'Olá! Gostaria de conversar com a equipe da Hydra One sobre um projeto.'
+};
+```
+
+Ao alterar o número nesta constante, **todos os botões da página, o botão flutuante e o modal de briefing passam a utilizar o novo número automaticamente**.
 
 ---
 

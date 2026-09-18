@@ -56,13 +56,13 @@
       </ul>
 
       <div class="nav-actions">
-        <button class="btn btn-primary" data-action="open-consultation" id="nav-cta-btn">
-          <span>Iniciar Projeto</span>
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <line x1="2" y1="8" x2="14" y2="8"></line>
-            <polyline points="9 3 14 8 9 13"></polyline>
+        <button class="btn btn-primary btn-whatsapp" data-action="open-whatsapp"
+          data-whatsapp-msg="Olá! Gostaria de conversar com a Hydra One sobre um novo projeto." id="nav-cta-btn">
+          <svg class="whatsapp-svg-icon" viewBox="0 0 24 24">
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
           </svg>
+          <span>Chamar no WhatsApp</span>
         </button>
         <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Abrir menu mobile">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -83,8 +83,14 @@
     <a href="#showcase">Stack & Código</a>
     <a href="#how-it-works">Metodologia</a>
     <a href="#pricing">Investimento</a>
-    <button class="btn btn-primary" data-action="open-consultation" style="width: 100%; margin-top: 8px;">
-      <span>Iniciar Projeto</span>
+    <button class="btn btn-primary btn-whatsapp" data-action="open-whatsapp"
+      data-whatsapp-msg="Olá! Gostaria de iniciar um projeto com a Hydra One." style="width: 100%; margin-top: 8px;"
+      id="mobile-cta-btn">
+      <svg class="whatsapp-svg-icon" viewBox="0 0 24 24">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+      </svg>
+      <span>Chamar no WhatsApp</span>
     </button>
   </div>
 
@@ -107,24 +113,26 @@
             </h1>
 
             <p class="hero-subtitle">
-              A <strong>Hydra One</strong> é uma empresa de tecnologia focada em criar produtos digitais de alto impacto —
+              A <strong>Hydra One</strong> é uma empresa de tecnologia focada em criar produtos digitais de alto impacto
+              —
               de plataformas SaaS escaláveis e landing pages de altíssima conversão a sistemas corporativos complexos,
               além de prestar consultoria técnica especializada para o seu time.
             </p>
 
             <div class="hero-cta-group">
-              <button class="btn btn-primary" data-action="open-consultation" id="hero-primary-cta">
-                <span>Solicitar Orçamento</span>
-                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="2" y1="8" x2="14" y2="8"></line>
-                  <polyline points="9 3 14 8 9 13"></polyline>
+              <button class="btn btn-primary btn-whatsapp" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Gostaria de solicitar um orçamento para um projeto com a Hydra One."
+                id="hero-primary-cta">
+                <svg class="whatsapp-svg-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
                 </svg>
+                <span>Solicitar Orçamento no WhatsApp</span>
               </button>
 
-              <a href="#solutions" class="btn btn-secondary" id="hero-secondary-cta">
-                <span>Ver o que Desenvolvemos</span>
-              </a>
+              <button class="btn btn-secondary" data-action="open-consultation" id="hero-secondary-cta">
+                <span>Enviar Briefing Detalhado</span>
+              </button>
             </div>
           </div>
 
@@ -215,7 +223,8 @@
         <div class="about-intro-grid">
           <div>
             <p class="about-text-lead">
-              A Hydra One nasceu para unir dois mundos que raramente se encontram: <strong>design de nível internacional com
+              A Hydra One nasceu para unir dois mundos que raramente se encontram: <strong>design de nível internacional
+                com
                 acabamento impecável</strong> e <strong>engenharia de software robusta, sem dívida técnica</strong>.
             </p>
             <p class="about-text-sub">
@@ -368,8 +377,9 @@
                 <span class="product-price-val">Sob Escopo</span>
                 <span class="product-price-sub">MVP ou Produto Completo</span>
               </div>
-              <button class="btn btn-primary" data-action="open-consultation"
-                style="padding: 8px 16px; font-size: 0.8125rem;">Orçar SaaS</button>
+              <button class="btn btn-primary" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Gostaria de orçar uma Plataforma SaaS com a Hydra One."
+                style="padding: 8px 16px; font-size: 0.8125rem;">Chamar no WhatsApp</button>
             </div>
           </div>
 
@@ -412,8 +422,9 @@
                 <span class="product-price-val">Entrega Rápida</span>
                 <span class="product-price-sub">Design + Copywriting + Dev</span>
               </div>
-              <button class="btn btn-secondary" data-action="open-consultation"
-                style="padding: 8px 16px; font-size: 0.8125rem;">Orçar LP</button>
+              <button class="btn btn-secondary" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Gostaria de orçar uma Landing Page de alto impacto com a Hydra One."
+                style="padding: 8px 16px; font-size: 0.8125rem;">Chamar no WhatsApp</button>
             </div>
           </div>
 
@@ -456,8 +467,9 @@
                 <span class="product-price-val">Sob Medida</span>
                 <span class="product-price-sub">Escopo fechado ou ágil</span>
               </div>
-              <button class="btn btn-secondary" data-action="open-consultation"
-                style="padding: 8px 16px; font-size: 0.8125rem;">Orçar Sistema</button>
+              <button class="btn btn-secondary" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Tenho interesse no desenvolvimento de um Sistema Web / ERP com a Hydra One."
+                style="padding: 8px 16px; font-size: 0.8125rem;">Chamar no WhatsApp</button>
             </div>
           </div>
         </div>
@@ -499,9 +511,10 @@
               Análise profunda do seu repositório para mapear gargalos de banco de dados, falhas graves de segurança,
               vazamento de memória e propor um plano de ação claro de refatoração.
             </p>
-            <button class="feature-link" data-action="open-consultation"
+            <button class="feature-link" data-action="open-whatsapp"
+              data-whatsapp-msg="Olá! Gostaria de solicitar um diagnóstico e auditoria de código com a Hydra One."
               style="background: none; border: none; cursor: pointer; padding: 0;">
-              <span>Solicitar Diagnóstico</span>
+              <span>Solicitar Diagnóstico no WhatsApp</span>
               <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M2 6H10M7 3L10 6L7 9" />
               </svg>
@@ -523,9 +536,10 @@
               Acelere a entrega do seu roadmap com desenvolvedores Fullstack sêniores e Tech Leads que se integram
               imediatamente ao seu fluxo de trabalho, sem curva de aprendizado demorada.
             </p>
-            <button class="feature-link" data-action="open-consultation"
+            <button class="feature-link" data-action="open-whatsapp"
+              data-whatsapp-msg="Olá! Gostaria de alocar desenvolvedores sêniores da Hydra One."
               style="background: none; border: none; cursor: pointer; padding: 0;">
-              <span>Alocar Desenvolvedores</span>
+              <span>Alocar Desenvolvedores no WhatsApp</span>
               <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M2 6H10M7 3L10 6L7 9" />
               </svg>
@@ -545,9 +559,10 @@
               Transição segura e gradual de códigos legados ou sistemas lentos para arquiteturas modernas na nuvem, com
               garantia de continuidade operacional e zero tempo de inatividade.
             </p>
-            <button class="feature-link" data-action="open-consultation"
+            <button class="feature-link" data-action="open-whatsapp"
+              data-whatsapp-msg="Olá! Gostaria de conversar sobre a modernização de um sistema legado com a Hydra One."
               style="background: none; border: none; cursor: pointer; padding: 0;">
-              <span>Planejar Modernização</span>
+              <span>Planejar Modernização no WhatsApp</span>
               <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M2 6H10M7 3L10 6L7 9" />
               </svg>
@@ -568,9 +583,10 @@
               Apoio estratégico para CTOs, fundadores e líderes de produto na escolha de tecnologias, desenho de
               arquitetura, redução de custos de nuvem (FinOps) e governança técnica.
             </p>
-            <button class="feature-link" data-action="open-consultation"
+            <button class="feature-link" data-action="open-whatsapp"
+              data-whatsapp-msg="Olá! Gostaria de falar com um Tech Lead da Hydra One sobre advisory técnico."
               style="background: none; border: none; cursor: pointer; padding: 0;">
-              <span>Falar com Tech Lead</span>
+              <span>Falar com Tech Lead no WhatsApp</span>
               <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M2 6H10M7 3L10 6L7 9" />
               </svg>
@@ -827,8 +843,9 @@
                   <span>Entrega rápida em ambiente de produção</span>
                 </li>
               </ul>
-              <button class="btn btn-secondary" data-action="open-consultation" style="width: 100%;">Solicitar
-                Orçamento de LP</button>
+              <button class="btn btn-secondary" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Gostaria de solicitar um orçamento para o plano Landing Page de Alta Conversão com a Hydra One."
+                style="width: 100%;">Chamar no WhatsApp</button>
             </div>
 
             <!-- Project Plan 2: SaaS MVP / Plataforma (Featured) -->
@@ -877,8 +894,9 @@
                   <span>Painel do usuário, área admin e infraestrutura configurada</span>
                 </li>
               </ul>
-              <button class="btn btn-primary" data-action="open-consultation" style="width: 100%;">Conversar sobre meu
-                SaaS</button>
+              <button class="btn btn-primary" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Quero conversar sobre o desenvolvimento do meu SaaS com a Hydra One."
+                style="width: 100%;">Chamar no WhatsApp</button>
             </div>
 
             <!-- Project Plan 3: Sistema Corporativo Enterprise -->
@@ -926,8 +944,9 @@
                   <span>Treinamento do time interno e documentação viva</span>
                 </li>
               </ul>
-              <button class="btn btn-secondary" data-action="open-consultation" style="width: 100%;">Agendar Reunião de
-                Escopo</button>
+              <button class="btn btn-secondary" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Gostaria de agendar uma reunião de escopo para um Sistema Web Corporativo com a Hydra One."
+                style="width: 100%;">Chamar no WhatsApp</button>
             </div>
           </div>
         </div>
@@ -972,8 +991,9 @@
                   <span>Relatório executivo + Plano de refatoração passo a passo</span>
                 </li>
               </ul>
-              <button class="btn btn-secondary" data-action="open-consultation" style="width: 100%;">Contratar
-                Auditoria</button>
+              <button class="btn btn-secondary" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Gostaria de contratar a Auditoria & Diagnóstico Técnico da Hydra One."
+                style="width: 100%;">Chamar no WhatsApp</button>
             </div>
 
             <!-- Consulting Plan 2: Squad Dedicado Sênior (Featured) -->
@@ -1022,8 +1042,9 @@
                   <span>Sem custos trabalhistas de contratação ou demissão</span>
                 </li>
               </ul>
-              <button class="btn btn-primary" data-action="open-consultation" style="width: 100%;">Alocar Squad
-                Agora</button>
+              <button class="btn btn-primary" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Gostaria de alocar uma Squad Sênior Dedicada da Hydra One."
+                style="width: 100%;">Chamar no WhatsApp</button>
             </div>
 
             <!-- Consulting Plan 3: Advisory para CTOs -->
@@ -1063,8 +1084,9 @@
                   <span>Canal direto com arquiteto sênior para suporte a incidentes</span>
                 </li>
               </ul>
-              <button class="btn btn-secondary" data-action="open-consultation" style="width: 100%;">Agendar
-                Alinhamento</button>
+              <button class="btn btn-secondary" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Gostaria de agendar um Alinhamento / Advisory para Líderes & CTOs com a Hydra One."
+                style="width: 100%;">Chamar no WhatsApp</button>
             </div>
           </div>
         </div>
@@ -1173,13 +1195,14 @@
             sem compromisso.
           </p>
           <div class="prefooter-actions">
-            <button class="btn btn-primary" data-action="open-consultation" id="prefooter-cta-btn">
-              <span>Falar sobre meu Projeto</span>
-              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <line x1="2" y1="8" x2="14" y2="8"></line>
-                <polyline points="9 3 14 8 9 13"></polyline>
+            <button class="btn btn-primary btn-whatsapp" data-action="open-whatsapp"
+              data-whatsapp-msg="Olá! Tenho um projeto e gostaria de conversar com os especialistas da Hydra One."
+              id="prefooter-cta-btn">
+              <svg class="whatsapp-svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
               </svg>
+              <span>Chamar no WhatsApp Agora</span>
             </button>
             <a href="#solutions" class="btn btn-secondary">Conhecer Soluções</a>
           </div>
@@ -1250,7 +1273,8 @@
             <li><a href="#how-it-works">Nossa Metodologia</a></li>
             <li><a href="#showcase">Stack de Engenharia</a></li>
             <li><a href="#testimonials">Casos de Sucesso</a></li>
-            <li><a href="#footer">Contato Direto</a></li>
+            <li><a href="#" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Gostaria de falar diretamente com a Hydra One.">Chamar no WhatsApp</a></li>
           </ul>
         </div>
 
@@ -1269,6 +1293,13 @@
       <div class="footer-bottom">
         <p>© 2026 Hydra One — Desenvolvimento de Software & Consultoria Técnica. Todos os direitos reservados.</p>
         <div class="footer-socials">
+          <a href="#" data-action="open-whatsapp"
+            data-whatsapp-msg="Olá! Gostaria de falar com os especialistas da Hydra One." aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+          </a>
           <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path
@@ -1303,10 +1334,11 @@
         <div class="modal-header">
           <div class="section-badge" style="margin-bottom: 12px;">
             <span class="dot"></span>
-            <span>Atendimento Personalizado</span>
+            <span>Atendimento Personalizado no WhatsApp</span>
           </div>
           <h3 class="modal-title" id="modal-title">Iniciar um Projeto com a Hydra One</h3>
-          <p class="modal-desc">Conte-nos sobre o que você deseja construir ou o desafio técnico da sua equipe.</p>
+          <p class="modal-desc">Preencha o formulário para enviar seu briefing diretamente para os líderes técnicos no
+            WhatsApp ou clique no botão direto abaixo.</p>
         </div>
 
         <form id="consultation-form">
@@ -1344,32 +1376,63 @@
               placeholder="Ex: Queremos criar um SaaS de gestão financeira com cobrança Stripe, ou precisamos refatorar nosso backend..."></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px 24px;">
-            <span>Solicitar Orçamento / Diagnóstico</span>
-            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="2" y1="8" x2="14" y2="8"></line>
-              <polyline points="9 3 14 8 9 13"></polyline>
+          <button type="submit" class="btn btn-whatsapp" style="width: 100%; padding: 14px 24px;">
+            <svg class="whatsapp-svg-icon" viewBox="0 0 24 24">
+              <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
             </svg>
+            <span>Iniciar Atendimento no WhatsApp</span>
           </button>
+          <div style="text-align: center; margin-top: 14px;">
+            <button type="button" data-action="open-whatsapp"
+              data-whatsapp-msg="Olá! Gostaria de conversar com a equipe da Hydra One diretamente." class="btn-link"
+              style="font-size: 0.8125rem; color: #94a3b8; text-decoration: underline; background: none; border: none; cursor: pointer;">
+              Prefiro conversar no WhatsApp sem preencher formulário →
+            </button>
+          </div>
         </form>
 
         <div class="modal-feedback" id="modal-success-feedback">
           <div
-            style="width: 56px; height: 56px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; color: #10b981;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="20 6 9 17 4 12"></polyline>
+            style="width: 56px; height: 56px; border-radius: 50%; background: rgba(37, 211, 102, 0.15); border: 1px solid rgba(37, 211, 102, 0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; color: #25d366;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
             </svg>
           </div>
-          <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; color: #fff;">Mensagem Recebida com
+          <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; color: #fff;">WhatsApp Aberto com
             Sucesso!</h4>
           <p style="font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">
-            Nossa equipe técnica entrará em contato em até 24 horas úteis com o direcionamento do seu projeto ou
-            agendamento de reunião de escopo.
+            Seu briefing foi formatado e enviado diretamente para a janela do WhatsApp. Basta clicar em
+            <strong>Enviar</strong> para falar com nossos engenheiros.
           </p>
+          <button type="button" class="btn btn-whatsapp" data-action="open-whatsapp"
+            data-whatsapp-msg="Olá! Gostaria de falar com os especialistas da Hydra One."
+            style="margin-top: 18px; width: 100%;">Reabrir Conversa no WhatsApp</button>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- ==========================================================================
+       Floating WhatsApp Action Button (FAB)
+       ========================================================================== -->
+  <aside class="whatsapp-float-wrapper" aria-label="Atendimento via WhatsApp">
+    <div class="whatsapp-tooltip">
+      <span class="whatsapp-tooltip-status"></span>
+      <span>Falar no WhatsApp com a Hydra One</span>
+    </div>
+    <a href="https://wa.me/5547999127653?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20a%20Hydra%20One%20sobre%20um%20projeto."
+      class="whatsapp-float-btn" id="whatsapp-float-btn" target="_blank" rel="noopener noreferrer"
+      aria-label="Iniciar conversa no WhatsApp com a Hydra One" data-action="open-whatsapp"
+      data-whatsapp-msg="Olá! Gostaria de conversar com a Hydra One sobre um projeto de desenvolvimento ou consultoria.">
+      <span class="whatsapp-pulse-ring"></span>
+      <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+      </svg>
+    </a>
+  </aside>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
