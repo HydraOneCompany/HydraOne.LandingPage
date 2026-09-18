@@ -196,13 +196,32 @@ textarea {
 }
 
 .logo-brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   font-weight: 700;
   font-size: 1.1875rem;
   letter-spacing: -0.02em;
   color: #fff;
+  text-decoration: none;
+  transition: opacity var(--transition-fast, 0.2s ease), transform var(--transition-fast, 0.2s ease);
+}
+
+.logo-brand:hover {
+  opacity: 0.9;
+}
+
+.logo-img {
+  height: 36px;
+  width: auto;
+  max-width: 155px;
+  display: block;
+  object-fit: contain;
+}
+
+.footer-brand .logo-img {
+  height: 40px;
+  max-width: 175px;
 }
 
 .logo-icon {
@@ -1770,6 +1789,9 @@ textarea {
 }
 
 @media (max-width: 768px) {
+  .logo-img {
+    height: 30px;
+  }
 
   .nav-links,
   .nav-actions .nav-link-subtle {

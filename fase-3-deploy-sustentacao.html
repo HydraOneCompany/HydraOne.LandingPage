@@ -15,6 +15,10 @@
     href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav.png">
+  <link rel="apple-touch-icon" href="assets/images/fav.png">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -26,22 +30,8 @@
        ========================================================================== -->
   <header class="site-header" id="header">
     <nav class="navbar container">
-      <a href="index.html#hero" class="logo-brand" id="brand-logo">
-        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 3L27.2583 9.5V22.5L16 29L4.74167 22.5V9.5L16 3Z" stroke="url(#hydra-grad)" stroke-width="2.2"
-            stroke-linejoin="round" />
-          <path d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" stroke="#a855f7" stroke-width="1.8"
-            stroke-linejoin="round" />
-          <circle cx="16" cy="15" r="2.5" fill="#ffffff" />
-          <defs>
-            <linearGradient id="hydra-grad" x1="4.74" y1="3" x2="27.25" y2="29" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#ffffff" />
-              <stop offset="0.5" stop-color="#a855f7" />
-              <stop offset="1" stop-color="#6366f1" />
-            </linearGradient>
-          </defs>
-        </svg>
-        <span>Hydra One</span>
+      <a href="index.html#hero" class="logo-brand" id="brand-logo" aria-label="Hydra One">
+        <img src="assets/images/logo.svg" alt="Hydra One" class="logo-img" width="134" height="36">
       </a>
 
       <ul class="nav-links">
@@ -377,20 +367,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html#hero" class="logo-brand">
-            <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
-              <path d="M16 3L27.2583 9.5V22.5L16 29L4.74167 22.5V9.5L16 3Z" stroke="url(#hydra-grad-foot)" stroke-width="2.2" />
-              <path d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" stroke="#a855f7" stroke-width="1.8" />
-              <circle cx="16" cy="15" r="2.5" fill="#ffffff" />
-              <defs>
-                <linearGradient id="hydra-grad-foot" x1="4.74" y1="3" x2="27.25" y2="29" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#ffffff" />
-                  <stop offset="0.5" stop-color="#a855f7" />
-                  <stop offset="1" stop-color="#6366f1" />
-                </linearGradient>
-              </defs>
-            </svg>
-            <span>Hydra One</span>
+          <a href="index.html#hero" class="logo-brand" aria-label="Hydra One">
+            <img src="assets/images/logo.svg" alt="Hydra One" class="logo-img" width="150" height="40">
           </a>
           <p>
             Engenharia de software com rigor de execução. Liberações graduais, feature flags e suporte contínuo para empresas líderes.
