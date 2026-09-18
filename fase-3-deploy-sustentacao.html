@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fase 3: Liberações Graduais, Feature Flags & Observabilidade | Metodologia Hydra One</title>
+  <meta name="description"
+    content="Entenda como a Hydra One executa deploys profissionais: liberações graduais (Canary/Blue-Green), Feature Flags com Kill Switch instantâneo, testes automatizados e segurança corporativa sem downtime.">
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="site-header" id="header">
+    <nav class="navbar container">
+      <a href="index.html#hero" class="logo-brand" id="brand-logo">
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 3L27.2583 9.5V22.5L16 29L4.74167 22.5V9.5L16 3Z" stroke="url(#hydra-grad)" stroke-width="2.2"
+            stroke-linejoin="round" />
+          <path d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" stroke="#a855f7" stroke-width="1.8"
+            stroke-linejoin="round" />
+          <circle cx="16" cy="15" r="2.5" fill="#ffffff" />
+          <defs>
+            <linearGradient id="hydra-grad" x1="4.74" y1="3" x2="27.25" y2="29" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#ffffff" />
+              <stop offset="0.5" stop-color="#a855f7" />
+              <stop offset="1" stop-color="#6366f1" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Hydra One</span>
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html#about">Quem Somos</a></li>
+        <li class="nav-item"><a href="index.html#solutions">O Que Fazemos</a></li>
+        <li class="nav-item"><a href="index.html#consulting">Consultoria</a></li>
+        <li class="nav-item"><a href="index.html#how-it-works" style="color: var(--accent-violet);">Metodologia</a></li>
+        <li class="nav-item"><a href="index.html#pricing">Investimento</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary btn-whatsapp" data-action="open-whatsapp"
+          data-whatsapp-msg="Olá! Gostaria de conversar sobre a estratégia de deploy, segurança e suporte da Hydra One."
+          id="nav-cta-btn">
+          <svg class="whatsapp-svg-icon" viewBox="0 0 24 24">
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+          </svg>
+          <span>Chamar no WhatsApp</span>
+        </button>
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Abrir menu mobile">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobile-menu-drawer">
+    <a href="index.html#about">Quem Somos</a>
+    <a href="index.html#solutions">O Que Fazemos</a>
+    <a href="index.html#consulting">Consultoria</a>
+    <a href="index.html#how-it-works">Metodologia</a>
+    <a href="index.html#pricing">Investimento</a>
+    <button class="btn btn-primary btn-whatsapp" data-action="open-whatsapp"
+      data-whatsapp-msg="Olá! Gostaria de conversar sobre deploy e segurança na Hydra One."
+      style="width: 100%; margin-top: 8px;">
+      <span>Chamar no WhatsApp</span>
+    </button>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="methodology-page-header">
+      <div class="container">
+        <div class="methodology-breadcrumbs">
+          <a href="index.html">Início</a>
+          <span class="sep">/</span>
+          <a href="index.html#how-it-works">Metodologia</a>
+          <span class="sep">/</span>
+          <span class="current">Fase 03</span>
+        </div>
+
+        <div class="section-badge">
+          <span class="dot" style="background: #22c55e;"></span>
+          <span>Fase 03 • Liberações Graduais, Feature Flags & Observabilidade</span>
+        </div>
+
+        <h1 class="methodology-page-title">
+          Deploy Sem Risco & Alta Disponibilidade: <br>
+          <span class="text-purple">Liberações graduais com Feature Flags e zero downtime</span>
+        </h1>
+
+        <p class="methodology-page-subtitle">
+          Na Hydra One, colocar um sistema no ar não é um evento estressante de madrugada. Aplicamos práticas de
+          engenharia de elite mundial: <strong>Canary Deployments</strong>, <strong>Feature Flags com Kill Switch instantâneo</strong> e
+          <strong>observabilidade em tempo real</strong> para garantir que seus usuários nunca vejam uma tela fora do ar.
+        </p>
+
+        <div class="methodology-quick-metrics">
+          <div class="metric-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span><strong>Zero Downtime</strong> garantido em cada atualização</span>
+          </div>
+          <div class="metric-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 14 14"></polyline>
+            </svg>
+            <span><strong>1 Segundo</strong> para reverter qualquer recurso com Kill Switch</span>
+          </div>
+          <div class="metric-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            <span><strong>Observabilidade 24/7</strong>: Monitoramento proativo de erros e latência</span>
+          </div>
+        </div>
+
+        <!-- Big Visual Showcase -->
+        <div class="methodology-visual-container">
+          <img src="assets/images/feature-flags.jpg"
+            alt="Painel de gerenciamento de Feature Flags, Canary Deployments e Observabilidade Contínua da Hydra One"
+            width="1080" height="608">
+          <div class="methodology-visual-caption">
+            <span>Painel de Engenharia — Feature Flags Dinâmicas, Tráfego Canary Gradual & Telemetria em Tempo Real</span>
+            <span class="badge-live">99.998% Uptime Ativo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Pilares da Fase 3
+         ========================================================================== -->
+    <section class="methodology-section">
+      <div class="container">
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 50px auto;">
+          <span class="section-tagline">Segurança & Previsibilidade de Nível Bancário</span>
+          <h2 class="section-title">Como blindamos a operação do seu negócio</h2>
+          <p class="section-description">
+            O verdadeiro profissionalismo de uma empresa de software se revela na estabilidade de produção. Conheça as
+            tecnologias que mantêm sua plataforma segura, rápida e imune a surpresas.
+          </p>
+        </div>
+
+        <div class="methodology-grid">
+          <!-- Card 1 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>1. Liberações Graduais (Canary & Blue-Green)</h3>
+            <p>
+              Em vez de atualizar 100% dos usuários de uma só vez, direcionamos primeiro 5% do tráfego para a nova versão.
+              Nossos robôs analisam telemetria e erros. Estando tudo perfeito, ampliamos para 25%, 50% e 100% de forma
+              totalmente imperceptível.
+            </p>
+            <ul class="pillar-checklist">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Zero downtime: o cliente nunca vê mensagem de "estamos em manutenção"</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Detecção automática de anomalias com aborto automático de deploy</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Ambientes espelhados (Blue/Green) para transição instantânea</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                <line x1="4" y1="22" x2="4" y2="15"></line>
+              </svg>
+            </div>
+            <h3>2. Feature Flags & Dark Launching</h3>
+            <p>
+              Separamos o ato de <em>implantar código</em> do ato de <em>liberar funcionalidades para o usuário</em>. Novas
+              ferramentas podem ser ativadas gradualmente para clientes VIPs ou grupos de teste através de interruptores
+              no painel de controle.
+            </p>
+            <ul class="pillar-checklist">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Kill Switch:</strong> Desative qualquer funcionalidade instável em 1 segundo</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Testes A/B nativos e validação de conversão antes da adoção em massa</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Sem necessidade de rebuild ou deploy emergencial para reverter algo</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <h3>3. Observabilidade, Suporte & DevSecOps</h3>
+            <p>
+              Monitoramos continuamente latência de consultas ao banco, consumo de memória, taxas de erro e tentativas de
+              invasão. Nossos engenheiros recebem alertas antes mesmo do seu cliente perceber qualquer instabilidade.
+            </p>
+            <ul class="pillar-checklist">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Tracing distribuído de ponta a ponta (tempo de resposta por endpoint)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Criptografia de dados em repouso e em trânsito (SSL/TLS estrito)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Backups automatizados diários com teste de restauração validado</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Comparison Matrix -->
+        <div class="comparison-matrix-wrapper">
+          <div class="comparison-header">
+            <h3>Deploy Amador vs. Engenharia de Produção Hydra One</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9375rem;">
+              Entenda o impacto financeiro e reputacional de ter um deploy com controle absoluto versus a roleta russa tradicional.
+            </p>
+          </div>
+          <div class="comparison-grid">
+            <div class="comparison-col traditional">
+              <h4>
+                <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="15" y1="9" x2="9" y2="15"></line>
+                  <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+                Deploy Amador & Tradicional
+              </h4>
+              <ul class="comparison-list">
+                <li>
+                  <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  <span>Deploys feitos de madrugada por medo do sistema cair em horário comercial.</span>
+                </li>
+                <li>
+                  <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  <span>Qualquer erro derruba a plataforma inteira para todos os clientes ao mesmo tempo.</span>
+                </li>
+                <li>
+                  <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  <span>Para reverter um bug crítico, é necessário horas de compilação e novo deploy sob pânico.</span>
+                </li>
+                <li>
+                  <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  <span>A equipe só descobre que o sistema quebrou quando os clientes reclamam no suporte.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="comparison-col hydra">
+              <h4>
+                <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                Engenharia de Produção Hydra One
+              </h4>
+              <ul class="comparison-list">
+                <li>
+                  <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Deploys diários a qualquer hora do dia com total tranquilidade e zero downtime.</span>
+                </li>
+                <li>
+                  <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Canary releases limitam qualquer impacto a um número mínimo de usuários controlados.</span>
+                </li>
+                <li>
+                  <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Feature Flags desligam instantaneamente recursos problemáticos sem novo deploy.</span>
+                </li>
+                <li>
+                  <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Observabilidade automatizada antecipa e alerta falhas antes de qualquer impacto.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Between Phases -->
+        <div class="phase-nav-container">
+          <div class="phase-nav-item">
+            <span class="phase-nav-label">Etapa Anterior</span>
+            <a href="fase-2-desenvolvimento-continuo.html" class="phase-nav-link">
+              ← Fase 02: Desenvolvimento Contínuo & Team Topologies
+            </a>
+          </div>
+          <div class="phase-nav-item next">
+            <span class="phase-nav-label">Primeira Etapa</span>
+            <a href="fase-1-prototipacao.html" class="phase-nav-link">
+              Fase 01: Prototipação em Alta Fidelidade →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pre-Footer CTA -->
+    <section class="prefooter-section">
+      <div class="container">
+        <div class="prefooter-banner">
+          <h2 class="prefooter-title">Proteja a estabilidade e reputação da sua aplicação</h2>
+          <p class="prefooter-subtitle">
+            Converse com a liderança técnica da Hydra One e conheça nosso modelo de sustentação, observabilidade e
+            engenharia de deploy de padrão corporativo.
+          </p>
+          <div class="prefooter-actions">
+            <button class="btn btn-primary btn-whatsapp" data-action="open-whatsapp"
+              data-whatsapp-msg="Olá! Gostaria de conversar com a Hydra One sobre deploy seguro, Feature Flags e sustentação de software.">
+              <svg class="whatsapp-svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+              </svg>
+              <span>Falar com Especialistas em Deploy</span>
+            </button>
+            <a href="fase-1-prototipacao.html" class="btn btn-secondary">Rever Fase 01</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html#hero" class="logo-brand">
+            <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+              <path d="M16 3L27.2583 9.5V22.5L16 29L4.74167 22.5V9.5L16 3Z" stroke="url(#hydra-grad-foot)" stroke-width="2.2" />
+              <path d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" stroke="#a855f7" stroke-width="1.8" />
+              <circle cx="16" cy="15" r="2.5" fill="#ffffff" />
+              <defs>
+                <linearGradient id="hydra-grad-foot" x1="4.74" y1="3" x2="27.25" y2="29" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ffffff" />
+                  <stop offset="0.5" stop-color="#a855f7" />
+                  <stop offset="1" stop-color="#6366f1" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>Hydra One</span>
+          </a>
+          <p>
+            Engenharia de software com rigor de execução. Liberações graduais, feature flags e suporte contínuo para empresas líderes.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Metodologias</h4>
+          <ul class="footer-links">
+            <li><a href="fase-1-prototipacao.html">Fase 01: Prototipação & Figma</a></li>
+            <li><a href="fase-2-desenvolvimento-continuo.html">Fase 02: Entrega Contínua</a></li>
+            <li><a href="fase-3-deploy-sustentacao.html" style="color: var(--accent-violet);">Fase 03: Liberações & Deploy</a></li>
+            <li><a href="index.html#how-it-works">Visão Geral do Processo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Soluções</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#solutions">Plataformas SaaS</a></li>
+            <li><a href="index.html#solutions">Landing Pages de Alta Conversão</a></li>
+            <li><a href="index.html#solutions">Sistemas Web & ERPs</a></li>
+            <li><a href="index.html#consulting">Auditoria & Squads</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato Direto</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/5547999127653" target="_blank" rel="noopener noreferrer" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Gostaria de falar diretamente com a Hydra One.">Chamar no WhatsApp (+55 47 99912-7653)</a></li>
+            <li><a href="tel:+5547999127653">Ligar: +55 (47) 99912-7653</a></li>
+            <li><a href="index.html#about">Quem É a Hydra One</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Hydra One — Desenvolvimento de Software & Consultoria Técnica. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button (FAB) -->
+  <aside class="whatsapp-float-wrapper" aria-label="Atendimento via WhatsApp">
+    <div class="whatsapp-tooltip">
+      <span class="whatsapp-tooltip-status"></span>
+      <span>Falar no WhatsApp com a Hydra One</span>
+    </div>
+    <a href="https://wa.me/5547999127653?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20a%20Hydra%20One%20sobre%20a%20Fase%203%20de%20Deploy%20e%20Feature%20Flags."
+      class="whatsapp-float-btn" id="whatsapp-float-btn" target="_blank" rel="noopener noreferrer"
+      aria-label="Iniciar conversa no WhatsApp" data-action="open-whatsapp"
+      data-whatsapp-msg="Olá! Gostaria de conversar com a Hydra One sobre a Fase 3 de Deploy e Feature Flags.">
+      <span class="whatsapp-pulse-ring"></span>
+      <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+      </svg>
+    </a>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

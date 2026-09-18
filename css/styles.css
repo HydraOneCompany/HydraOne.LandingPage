@@ -1974,3 +1974,392 @@ textarea {
     display: none;
   }
 }
+
+/* ==========================================================================
+   Methodology Dedicated Subpages Styles
+   ========================================================================== */
+.methodology-page-header {
+  padding: 140px 0 60px 0;
+  position: relative;
+  text-align: center;
+}
+
+.methodology-breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.methodology-breadcrumbs a {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.methodology-breadcrumbs a:hover {
+  color: var(--accent-purple);
+}
+
+.methodology-breadcrumbs span.sep {
+  opacity: 0.4;
+}
+
+.methodology-breadcrumbs span.current {
+  color: var(--accent-violet);
+  font-weight: 600;
+}
+
+.methodology-page-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.methodology-page-subtitle {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  color: var(--text-secondary);
+  max-width: 780px;
+  margin: 0 auto 36px auto;
+  line-height: 1.6;
+}
+
+.methodology-quick-metrics {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.metric-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.metric-chip strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.metric-chip svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent-violet);
+  flex-shrink: 0;
+}
+
+/* Big Visual Showcase */
+.methodology-visual-container {
+  margin: 0 auto 70px auto;
+  max-width: 1080px;
+  border-radius: var(--radius-xl);
+  padding: 12px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid var(--border-medium);
+  box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(168, 85, 247, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.methodology-visual-container img {
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius-xl) - 6px);
+  display: block;
+}
+
+.methodology-visual-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px 4px 16px;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.methodology-visual-caption span.badge-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.methodology-visual-caption span.badge-live::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+/* Deep Dive Content Sections */
+.methodology-section {
+  padding: 50px 0;
+}
+
+.section-tagline {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-violet);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.pillar-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all var(--transition-base);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-bright);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.pillar-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-violet);
+  margin-bottom: 20px;
+}
+
+.pillar-icon-box svg {
+  width: 26px;
+  height: 26px;
+}
+
+.pillar-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.pillar-card p {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.pillar-checklist {
+  list-style: none;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 18px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pillar-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.pillar-checklist li svg {
+  width: 16px;
+  height: 16px;
+  color: #22c55e;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Comparison Matrix (Tradicional vs Hydra One) */
+.comparison-matrix-wrapper {
+  margin: 70px 0;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.comparison-header {
+  padding: 30px 36px;
+  border-bottom: 1px solid var(--border-subtle);
+  text-align: center;
+}
+
+.comparison-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.comparison-col {
+  padding: 36px;
+}
+
+.comparison-col.traditional {
+  background: rgba(239, 68, 68, 0.02);
+  border-right: 1px solid var(--border-subtle);
+}
+
+.comparison-col.hydra {
+  background: rgba(168, 85, 247, 0.04);
+}
+
+.comparison-col h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comparison-col.traditional h4 {
+  color: #f87171;
+}
+
+.comparison-col.hydra h4 {
+  color: var(--accent-violet);
+}
+
+.comparison-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.comparison-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.comparison-list li svg.bad {
+  color: #ef4444;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.comparison-list li svg.good {
+  color: #22c55e;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Methodology Bottom Navigation (Phase Switcher) */
+.phase-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  margin: 60px 0;
+}
+
+.phase-nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.phase-nav-item.next {
+  text-align: right;
+}
+
+.phase-nav-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.phase-nav-link {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color var(--transition-fast);
+}
+
+.phase-nav-link:hover {
+  color: var(--accent-violet);
+}
+
+/* Link on index.html step cards */
+.step-card .step-detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-violet);
+  margin-top: 18px;
+  transition: gap var(--transition-fast), color var(--transition-fast);
+}
+
+.step-card .step-detail-link:hover {
+  color: #c084fc;
+  gap: 12px;
+}

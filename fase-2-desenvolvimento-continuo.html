@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fase 2: Desenvolvimento Contínuo & Team Topologies | Metodologia Hydra One</title>
+  <meta name="description"
+    content="Descubra a metodologia de entrega contínua da Hydra One: abandonamos sprints burocráticas e organizamos times de engenharia inspirados em Team Topologies com automação extrema e foco em propósito de negócio.">
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="site-header" id="header">
+    <nav class="navbar container">
+      <a href="index.html#hero" class="logo-brand" id="brand-logo">
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 3L27.2583 9.5V22.5L16 29L4.74167 22.5V9.5L16 3Z" stroke="url(#hydra-grad)" stroke-width="2.2"
+            stroke-linejoin="round" />
+          <path d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" stroke="#a855f7" stroke-width="1.8"
+            stroke-linejoin="round" />
+          <circle cx="16" cy="15" r="2.5" fill="#ffffff" />
+          <defs>
+            <linearGradient id="hydra-grad" x1="4.74" y1="3" x2="27.25" y2="29" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#ffffff" />
+              <stop offset="0.5" stop-color="#a855f7" />
+              <stop offset="1" stop-color="#6366f1" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Hydra One</span>
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html#about">Quem Somos</a></li>
+        <li class="nav-item"><a href="index.html#solutions">O Que Fazemos</a></li>
+        <li class="nav-item"><a href="index.html#consulting">Consultoria</a></li>
+        <li class="nav-item"><a href="index.html#how-it-works" style="color: var(--accent-violet);">Metodologia</a></li>
+        <li class="nav-item"><a href="index.html#pricing">Investimento</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary btn-whatsapp" data-action="open-whatsapp"
+          data-whatsapp-msg="Olá! Gostaria de entender o modelo de desenvolvimento contínuo e Team Topologies da Hydra One."
+          id="nav-cta-btn">
+          <svg class="whatsapp-svg-icon" viewBox="0 0 24 24">
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+          </svg>
+          <span>Chamar no WhatsApp</span>
+        </button>
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Abrir menu mobile">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobile-menu-drawer">
+    <a href="index.html#about">Quem Somos</a>
+    <a href="index.html#solutions">O Que Fazemos</a>
+    <a href="index.html#consulting">Consultoria</a>
+    <a href="index.html#how-it-works">Metodologia</a>
+    <a href="index.html#pricing">Investimento</a>
+    <button class="btn btn-primary btn-whatsapp" data-action="open-whatsapp"
+      data-whatsapp-msg="Olá! Gostaria de conversar sobre desenvolvimento contínuo."
+      style="width: 100%; margin-top: 8px;">
+      <span>Chamar no WhatsApp</span>
+    </button>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="methodology-page-header">
+      <div class="container">
+        <div class="methodology-breadcrumbs">
+          <a href="index.html">Início</a>
+          <span class="sep">/</span>
+          <a href="index.html#how-it-works">Metodologia</a>
+          <span class="sep">/</span>
+          <span class="current">Fase 02</span>
+        </div>
+
+        <div class="section-badge">
+          <span class="dot" style="background: var(--accent-indigo);"></span>
+          <span>Fase 02 • Engenharia Contínua & Team Topologies</span>
+        </div>
+
+        <h1 class="methodology-page-title">
+          Fluxo Contínuo de Entrega: <br>
+          <span class="text-purple">Menos rituais de Sprints, mais software em produção com propósito</span>
+        </h1>
+
+        <p class="methodology-page-subtitle">
+          Sprints tradicionais de 15 a 30 dias tornaram-se desculpas corporativas para atrasos e acúmulo de entregas em lote.
+          Na Hydra One, aplicamos <strong>Continuous Delivery</strong> com squads estruturadas com base em <strong>Team Topologies</strong>,
+          onde cada commit é testado, automatizado e focado em gerar valor direto para o negócio.
+        </p>
+
+        <div class="methodology-quick-metrics">
+          <div class="metric-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            <span><strong>Fluxo Diário</strong> sem esperas artificiais por fechamento de sprint</span>
+          </div>
+          <div class="metric-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M16 12l-4-4-4 4M12 16V9"></path>
+            </svg>
+            <span><strong>Team Topologies</strong>: Organização focada em fluxo de valor</span>
+          </div>
+          <div class="metric-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span><strong>Automação CI/CD</strong> com validação de testes a cada merge</span>
+          </div>
+        </div>
+
+        <!-- Big Visual Showcase -->
+        <div class="methodology-visual-container">
+          <img src="assets/images/team-topologies.jpg"
+            alt="Arquitetura de Team Topologies e Esteira de Entrega Contínua CI/CD da Hydra One"
+            width="1080" height="608">
+          <div class="methodology-visual-caption">
+            <span>Arquitetura de Times & Pipeline de CI/CD — Stream-aligned, Platform, Enabling & Complicated-Subsystem</span>
+            <span class="badge-live">Pipeline 100% Automatizado</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Pilares da Fase 2
+         ========================================================================== -->
+    <section class="methodology-section">
+      <div class="container">
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 50px auto;">
+          <span class="section-tagline">Por Que o Modelo Tradicional de Sprints Falha?</span>
+          <h2 class="section-title">Engenharia ágil de verdade vs. Burocracia disfarçada de ágil</h2>
+          <p class="section-description">
+            O mercado acostumou empresas a esperar 3 semanas para ver o resultado de uma reunião. Nós trocamos cerimônias
+            cansativas por deploys contínuos, automação pesada e foco obstinado em métricas financeiras e operacionais.
+          </p>
+        </div>
+
+        <div class="methodology-grid">
+          <!-- Card 1 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
+            <h3>1. Foco em Propósito & Impacto de Negócio</h3>
+            <p>
+              Não medimos sucesso em "story points queimados". Medimos se a funcionalidade reduziu o custo de atendimento,
+              aumentou a taxa de conversão, destravou novas vendas ou acelerou o carregamento do banco de dados.
+            </p>
+            <ul class="pillar-checklist">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Cada entrega atende a um objetivo de negócio explícito (OKR/KPI)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Transparência total em ambiente de staging compartilhado</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Engenheiros seniores que entendem o modelo financeiro do seu produto</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>2. Estrutura Baseada em Team Topologies</h3>
+            <p>
+              Inspirados na obra de referência de Matthew Skelton e Manuel Pais, organizamos a equipe para minimizar a
+              carga cognitiva e eliminar silos operacionais:
+            </p>
+            <ul class="pillar-checklist">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Stream-aligned:</strong> Squad dedicada ao fluxo de valor do produto</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Platform Team:</strong> Infraestrutura, automação e esteiras aceleradoras</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Enabling & Complicated-subsystem:</strong> Mentoria técnica e módulos complexos</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3>3. Automação Extrema & CI/CD</h3>
+            <p>
+              Todo código inserido no repositório passa por dezenas de testes automáticos antes de ser integrado. Não
+              dependemos de memória humana para garantir que nada foi quebrado.
+            </p>
+            <ul class="pillar-checklist">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Testes unitários e de integração disparados a cada push</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Linters rigorosos e análise estática de código automatizada</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Ambientes de demonstração efêmeros criados dinamicamente</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Comparison Matrix -->
+        <div class="comparison-matrix-wrapper">
+          <div class="comparison-header">
+            <h3>Sprints Tradicionais vs. Engenharia Contínua Hydra One</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9375rem;">
+              Compare a produtividade real de um time moderno de entrega contínua com os velhos hábitos do mercado.
+            </p>
+          </div>
+          <div class="comparison-grid">
+            <div class="comparison-col traditional">
+              <h4>
+                <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="15" y1="9" x2="9" y2="15"></line>
+                  <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+                A Armadilha das Sprints Burocráticas
+              </h4>
+              <ul class="comparison-list">
+                <li>
+                  <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  <span>Reuniões diárias que viram prestação de contas exaustiva e improdutiva.</span>
+                </li>
+                <li>
+                  <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  <span>O software só é integrado e testado no final do ciclo (batch release perigoso).</span>
+                </li>
+                <li>
+                  <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  <span>Desenvolvedores focam em "fechar tarefas" mesmo que o recurso não resolva a dor do cliente.</span>
+                </li>
+                <li>
+                  <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  <span>Qualquer mudança no meio da sprint exige "replanejar a sprint inteira".</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="comparison-col hydra">
+              <h4>
+                <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                Fluxo Contínuo & Team Topologies Hydra One
+              </h4>
+              <ul class="comparison-list">
+                <li>
+                  <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Funcionalidades desenvolvidas, validadas e prontas para visualização a cada ciclo diário.</span>
+                </li>
+                <li>
+                  <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Esteiras automatizadas de CI/CD realizam testes e verificam segurança a cada commit.</span>
+                </li>
+                <li>
+                  <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Engenharia orientada a metas de negócio claras: retenção, conversão e estabilidade.</span>
+                </li>
+                <li>
+                  <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Carga cognitiva reduzida e autonomia total das squads para entregar sem atrito.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Between Phases -->
+        <div class="phase-nav-container">
+          <div class="phase-nav-item">
+            <span class="phase-nav-label">Etapa Anterior</span>
+            <a href="fase-1-prototipacao.html" class="phase-nav-link">
+              ← Fase 01: Prototipação em Alta Fidelidade
+            </a>
+          </div>
+          <div class="phase-nav-item next">
+            <span class="phase-nav-label">Próxima Etapa</span>
+            <a href="fase-3-deploy-sustentacao.html" class="phase-nav-link">
+              Fase 03: Liberações Graduais & Feature Flags →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pre-Footer CTA -->
+    <section class="prefooter-section">
+      <div class="container">
+        <div class="prefooter-banner">
+          <h2 class="prefooter-title">Cansado de atrasos de sprints e falta de entrega real?</h2>
+          <p class="prefooter-subtitle">
+            Implemente um fluxo contínuo de engenharia de software na sua empresa com a equipe sênior da Hydra One.
+          </p>
+          <div class="prefooter-actions">
+            <button class="btn btn-primary btn-whatsapp" data-action="open-whatsapp"
+              data-whatsapp-msg="Olá! Gostaria de conversar com a Hydra One sobre desenvolvimento contínuo e alocação de squads.">
+              <svg class="whatsapp-svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+              </svg>
+              <span>Falar com Nossos Engenheiros</span>
+            </button>
+            <a href="fase-3-deploy-sustentacao.html" class="btn btn-secondary">Conhecer Fase 03</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html#hero" class="logo-brand">
+            <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+              <path d="M16 3L27.2583 9.5V22.5L16 29L4.74167 22.5V9.5L16 3Z" stroke="url(#hydra-grad-foot)" stroke-width="2.2" />
+              <path d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" stroke="#a855f7" stroke-width="1.8" />
+              <circle cx="16" cy="15" r="2.5" fill="#ffffff" />
+              <defs>
+                <linearGradient id="hydra-grad-foot" x1="4.74" y1="3" x2="27.25" y2="29" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ffffff" />
+                  <stop offset="0.5" stop-color="#a855f7" />
+                  <stop offset="1" stop-color="#6366f1" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>Hydra One</span>
+          </a>
+          <p>
+            Engenharia de software de alta densidade técnica. Foco em arquitetura escalável, automação contínua e resultados de negócio.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Metodologias</h4>
+          <ul class="footer-links">
+            <li><a href="fase-1-prototipacao.html">Fase 01: Prototipação & Figma</a></li>
+            <li><a href="fase-2-desenvolvimento-continuo.html" style="color: var(--accent-violet);">Fase 02: Entrega Contínua</a></li>
+            <li><a href="fase-3-deploy-sustentacao.html">Fase 03: Liberações & Deploy</a></li>
+            <li><a href="index.html#how-it-works">Visão Geral do Processo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Soluções</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#solutions">Plataformas SaaS</a></li>
+            <li><a href="index.html#solutions">Landing Pages de Alta Conversão</a></li>
+            <li><a href="index.html#solutions">Sistemas Web & ERPs</a></li>
+            <li><a href="index.html#consulting">Auditoria & Squads</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato Direto</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/5547999127653" target="_blank" rel="noopener noreferrer" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Gostaria de falar diretamente com a Hydra One.">Chamar no WhatsApp (+55 47 99912-7653)</a></li>
+            <li><a href="tel:+5547999127653">Ligar: +55 (47) 99912-7653</a></li>
+            <li><a href="index.html#about">Quem É a Hydra One</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Hydra One — Desenvolvimento de Software & Consultoria Técnica. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button (FAB) -->
+  <aside class="whatsapp-float-wrapper" aria-label="Atendimento via WhatsApp">
+    <div class="whatsapp-tooltip">
+      <span class="whatsapp-tooltip-status"></span>
+      <span>Falar no WhatsApp com a Hydra One</span>
+    </div>
+    <a href="https://wa.me/5547999127653?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20a%20Hydra%20One%20sobre%20a%20Fase%202%20de%20Desenvolvimento%20Cont%C3%ADnuo."
+      class="whatsapp-float-btn" id="whatsapp-float-btn" target="_blank" rel="noopener noreferrer"
+      aria-label="Iniciar conversa no WhatsApp" data-action="open-whatsapp"
+      data-whatsapp-msg="Olá! Gostaria de conversar com a Hydra One sobre a Fase 2 de Desenvolvimento Contínuo.">
+      <span class="whatsapp-pulse-ring"></span>
+      <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+      </svg>
+    </a>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

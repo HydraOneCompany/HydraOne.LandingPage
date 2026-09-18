@@ -8,8 +8,8 @@
    Configure seu telefone e mensagens padrão da Hydra One
    ========================================================================== */
 const WHATSAPP_CONFIG = {
-  // Número oficial com DDI e DDD (ex: 5511999999999)
-  phone: '5511999999999',
+  // Número oficial com DDI e DDD (ex: 5547999127653)
+  phone: '5547999127653',
   defaultMessage: 'Olá! Gostaria de conversar com a equipe da Hydra One sobre um projeto de desenvolvimento ou consultoria.'
 };
 

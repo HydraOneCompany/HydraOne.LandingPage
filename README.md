@@ -107,7 +107,7 @@ Para definir o número oficial de atendimento da **Hydra One**, abra o arquivo [
 ```javascript
 const WHATSAPP_CONFIG = {
   // Informe o número com DDI e DDD (somente números)
-  phone: '5511999999999', 
+  phone: '5547999127653', 
   defaultMessage: 'Olá! Gostaria de conversar com a equipe da Hydra One sobre um projeto.'
 };
 ```

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fase 1: Prototipação em Alta Fidelidade & Figma | Metodologia Hydra One</title>
+  <meta name="description"
+    content="Entenda como a Hydra One utiliza prototipação em alta fidelidade no Figma, design systems escaláveis e engenharia cirúrgica de requisitos para eliminar 100% das surpresas e retrabalho antes do código.">
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="site-header" id="header">
+    <nav class="navbar container">
+      <a href="index.html#hero" class="logo-brand" id="brand-logo">
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 3L27.2583 9.5V22.5L16 29L4.74167 22.5V9.5L16 3Z" stroke="url(#hydra-grad)" stroke-width="2.2"
+            stroke-linejoin="round" />
+          <path d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" stroke="#a855f7" stroke-width="1.8"
+            stroke-linejoin="round" />
+          <circle cx="16" cy="15" r="2.5" fill="#ffffff" />
+          <defs>
+            <linearGradient id="hydra-grad" x1="4.74" y1="3" x2="27.25" y2="29" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#ffffff" />
+              <stop offset="0.5" stop-color="#a855f7" />
+              <stop offset="1" stop-color="#6366f1" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Hydra One</span>
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html#about">Quem Somos</a></li>
+        <li class="nav-item"><a href="index.html#solutions">O Que Fazemos</a></li>
+        <li class="nav-item"><a href="index.html#consulting">Consultoria</a></li>
+        <li class="nav-item"><a href="index.html#how-it-works" style="color: var(--accent-violet);">Metodologia</a></li>
+        <li class="nav-item"><a href="index.html#pricing">Investimento</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary btn-whatsapp" data-action="open-whatsapp"
+          data-whatsapp-msg="Olá! Gostaria de conversar sobre a prototipação e design do meu projeto no Figma."
+          id="nav-cta-btn">
+          <svg class="whatsapp-svg-icon" viewBox="0 0 24 24">
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+          </svg>
+          <span>Chamar no WhatsApp</span>
+        </button>
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Abrir menu mobile">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobile-menu-drawer">
+    <a href="index.html#about">Quem Somos</a>
+    <a href="index.html#solutions">O Que Fazemos</a>
+    <a href="index.html#consulting">Consultoria</a>
+    <a href="index.html#how-it-works">Metodologia</a>
+    <a href="index.html#pricing">Investimento</a>
+    <button class="btn btn-primary btn-whatsapp" data-action="open-whatsapp"
+      data-whatsapp-msg="Olá! Gostaria de conversar sobre a prototipação do meu projeto."
+      style="width: 100%; margin-top: 8px;">
+      <span>Chamar no WhatsApp</span>
+    </button>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="methodology-page-header">
+      <div class="container">
+        <div class="methodology-breadcrumbs">
+          <a href="index.html">Início</a>
+          <span class="sep">/</span>
+          <a href="index.html#how-it-works">Metodologia</a>
+          <span class="sep">/</span>
+          <span class="current">Fase 01</span>
+        </div>
+
+        <div class="section-badge">
+          <span class="dot" style="background: var(--accent-violet);"></span>
+          <span>Fase 01 • Engenharia de Requisitos & Design System</span>
+        </div>
+
+        <h1 class="methodology-page-title">
+          Prototipação em Alta Fidelidade: <br>
+          <span class="text-purple">O que você vê no Figma é exatamente o que vai para o ar</span>
+        </h1>
+
+        <p class="methodology-page-subtitle">
+          Eliminamos suposições e desperdício de investimento. Antes de escrever uma única linha de código, projetamos
+          cada tela, fluxo, regra de validação e estado interativo com precisão milimétrica.
+        </p>
+
+        <div class="methodology-quick-metrics">
+          <div class="metric-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span><strong>100%</strong> Paridade entre Protótipo e Código</span>
+          </div>
+          <div class="metric-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 14 14"></polyline>
+            </svg>
+            <span><strong>-40%</strong> Redução no Tempo Global de Entrega</span>
+          </div>
+          <div class="metric-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <span><strong>Zero</strong> Custo de Refatoração Visual Tardia</span>
+          </div>
+        </div>
+
+        <!-- Big Visual Showcase -->
+        <div class="methodology-visual-container">
+          <img src="assets/images/figma-showcase.jpg"
+            alt="Ambiente de trabalho no Figma mostrando o Design System completo, telas em alta fidelidade e protótipo navegável"
+            width="1080" height="608">
+          <div class="methodology-visual-caption">
+            <span>Ambiente Figma Profissional — Design Tokens, Componentes Atômicos & Protótipo Navegável</span>
+            <span class="badge-live">Paridade 1:1 Garantida</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Pilares da Fase 1
+         ========================================================================== -->
+    <section class="methodology-section">
+      <div class="container">
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 50px auto;">
+          <span class="section-tagline">Rigor Técnico Desde o Primeiro Dia</span>
+          <h2 class="section-title">Como estruturamos a fundação do seu produto</h2>
+          <p class="section-description">
+            Enquanto agências tradicionais desenham "telas bonitas que não funcionam no backend", nós desenhamos
+            arquiteturas de dados visuais preparadas para engenharia de software real.
+          </p>
+        </div>
+
+        <div class="methodology-grid">
+          <!-- Card 1 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3>1. Engenharia Cirúrgica de Requisitos</h3>
+            <p>
+              Mapeamos regras de negócio, permissionamento de usuários, casos extremos (edge cases), validações de campos
+              e integrações com APIs antes de qualquer rabisco.
+            </p>
+            <ul class="pillar-checklist">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Mapeamento de papéis e jornadas de usuários</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Definição clara de escopo sem reuniões infinitas</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Modelagem preliminar de entidades e banco de dados</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+            </div>
+            <h3>2. Design System Escalável & Tokens</h3>
+            <p>
+              Criamos uma biblioteca completa de componentes no Figma que espelha o código CSS/React/Tailwind. Cores,
+              tipografia, estados de botões, modais e formulários seguem um padrão industrial.
+            </p>
+            <ul class="pillar-checklist">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Tokens de design reutilizáveis (cores, grid, tipografia)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Estados de componentes: Hover, Active, Loading e Disabled</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Consistência visual impecável em 100% da plataforma</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+            </div>
+            <h3>3. Protótipo Interativo em Alta Fidelidade</h3>
+            <p>
+              Você recebe um link navegável do Figma onde pode clicar, alternar abas, testar fluxos de compra ou painéis
+              analíticos como se já fosse o aplicativo pronto e publicado.
+            </p>
+            <ul class="pillar-checklist">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Apresentação executiva para sócios e investidores</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Validação com usuários finais antes de investir em código</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Transição perfeita para o time de desenvolvimento</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Comparison Matrix -->
+        <div class="comparison-matrix-wrapper">
+          <div class="comparison-header">
+            <h3>Por que nossa Fase 01 protege o seu orçamento?</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9375rem;">
+              Alterar um botão ou regra no Figma leva 2 minutos. Fazer isso depois que o código foi construído custa dias de retrabalho.
+            </p>
+          </div>
+          <div class="comparison-grid">
+            <div class="comparison-col traditional">
+              <h4>
+                <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="15" y1="9" x2="9" y2="15"></line>
+                  <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+                Desenvolvimento Tradicional / Amador
+              </h4>
+              <ul class="comparison-list">
+                <li>
+                  <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  <span>Começa a codificar com wireframes soltos ou requisitos em rascunho de texto.</span>
+                </li>
+                <li>
+                  <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  <span>O cliente só vê a tela semanas depois, gerando decepção estética ou funcional.</span>
+                </li>
+                <li>
+                  <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  <span>Mudanças de layout exigem reescrita cara de HTML, CSS e componentes de backend.</span>
+                </li>
+                <li>
+                  <svg class="bad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                  <span>Falta de padrão visual deixa o sistema com aspecto remendado e amador.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="comparison-col hydra">
+              <h4>
+                <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                Engenharia de Software Hydra One
+              </h4>
+              <ul class="comparison-list">
+                <li>
+                  <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Telas em alta definição idênticas à aplicação final aprovadas antes do código.</span>
+                </li>
+                <li>
+                  <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Você e seus clientes navegam pelo protótipo e validam fluxos em tempo real.</span>
+                </li>
+                <li>
+                  <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Design tokens sincronizados diretamente com a arquitetura de componentes do código.</span>
+                </li>
+                <li>
+                  <svg class="good" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Previsibilidade orçamentária total e eliminação de atrasos por indecisão estética.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Between Phases -->
+        <div class="phase-nav-container">
+          <div class="phase-nav-item">
+            <span class="phase-nav-label">Navegação Metodológica</span>
+            <a href="index.html#how-it-works" class="phase-nav-link">
+              ← Voltar para Visão Geral
+            </a>
+          </div>
+          <div class="phase-nav-item next">
+            <span class="phase-nav-label">Próxima Etapa</span>
+            <a href="fase-2-desenvolvimento-continuo.html" class="phase-nav-link">
+              Fase 02: Entrega Contínua & Team Topologies →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pre-Footer CTA -->
+    <section class="prefooter-section">
+      <div class="container">
+        <div class="prefooter-banner">
+          <h2 class="prefooter-title">Quer ver o seu projeto prototipado em alta fidelidade?</h2>
+          <p class="prefooter-subtitle">
+            Converse diretamente com nossos especialistas e veja como estruturamos a sua ideia em Figma profissional
+            antes da primeira linha de código.
+          </p>
+          <div class="prefooter-actions">
+            <button class="btn btn-primary btn-whatsapp" data-action="open-whatsapp"
+              data-whatsapp-msg="Olá! Gostaria de prototipar meu projeto com a equipe de design e engenharia da Hydra One.">
+              <svg class="whatsapp-svg-icon" viewBox="0 0 24 24">
+                <path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+              </svg>
+              <span>Solicitar Prototipação no WhatsApp</span>
+            </button>
+            <a href="fase-2-desenvolvimento-continuo.html" class="btn btn-secondary">Conhecer Fase 02</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html#hero" class="logo-brand">
+            <svg class="logo-icon" viewBox="0 0 32 32" fill="none">
+              <path d="M16 3L27.2583 9.5V22.5L16 29L4.74167 22.5V9.5L16 3Z" stroke="url(#hydra-grad-foot)" stroke-width="2.2" />
+              <path d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" stroke="#a855f7" stroke-width="1.8" />
+              <circle cx="16" cy="15" r="2.5" fill="#ffffff" />
+              <defs>
+                <linearGradient id="hydra-grad-foot" x1="4.74" y1="3" x2="27.25" y2="29" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ffffff" />
+                  <stop offset="0.5" stop-color="#a855f7" />
+                  <stop offset="1" stop-color="#6366f1" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>Hydra One</span>
+          </a>
+          <p>
+            Engenharia de software de alto impacto e consultoria técnica sênior. Foco em soluções robustas, seguras e com propósito de negócio.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Metodologias</h4>
+          <ul class="footer-links">
+            <li><a href="fase-1-prototipacao.html" style="color: var(--accent-violet);">Fase 01: Prototipação & Figma</a></li>
+            <li><a href="fase-2-desenvolvimento-continuo.html">Fase 02: Entrega Contínua</a></li>
+            <li><a href="fase-3-deploy-sustentacao.html">Fase 03: Liberações & Deploy</a></li>
+            <li><a href="index.html#how-it-works">Visão Geral do Processo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Soluções</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#solutions">Plataformas SaaS</a></li>
+            <li><a href="index.html#solutions">Landing Pages de Alta Conversão</a></li>
+            <li><a href="index.html#solutions">Sistemas Web & ERPs</a></li>
+            <li><a href="index.html#consulting">Auditoria & Squads</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato Direto</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/5547999127653" target="_blank" rel="noopener noreferrer" data-action="open-whatsapp"
+                data-whatsapp-msg="Olá! Gostaria de falar diretamente com a Hydra One.">Chamar no WhatsApp (+55 47 99912-7653)</a></li>
+            <li><a href="tel:+5547999127653">Ligar: +55 (47) 99912-7653</a></li>
+            <li><a href="index.html#about">Quem É a Hydra One</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Hydra One — Desenvolvimento de Software & Consultoria Técnica. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button (FAB) -->
+  <aside class="whatsapp-float-wrapper" aria-label="Atendimento via WhatsApp">
+    <div class="whatsapp-tooltip">
+      <span class="whatsapp-tooltip-status"></span>
+      <span>Falar no WhatsApp com a Hydra One</span>
+    </div>
+    <a href="https://wa.me/5547999127653?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20com%20a%20Hydra%20One%20sobre%20a%20Fase%201%20de%20Prototipa%C3%A7%C3%A3o."
+      class="whatsapp-float-btn" id="whatsapp-float-btn" target="_blank" rel="noopener noreferrer"
+      aria-label="Iniciar conversa no WhatsApp" data-action="open-whatsapp"
+      data-whatsapp-msg="Olá! Gostaria de conversar com a Hydra One sobre a Fase 1 de Prototipação e Design.">
+      <span class="whatsapp-pulse-ring"></span>
+      <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+      </svg>
+    </a>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
