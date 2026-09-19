@@ -1138,6 +1138,111 @@ textarea {
 }
 
 /* ==========================================================================
+   FAQ Section (Perguntas Frequentes & SEO Rich Snippets)
+   ========================================================================== */
+.faq-section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.faq-accordion-container {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+  backdrop-filter: blur(12px);
+}
+
+.faq-item:hover {
+  border-color: rgba(168, 85, 247, 0.35);
+  background: var(--bg-card-hover);
+}
+
+.faq-item.active {
+  border-color: rgba(168, 85, 247, 0.45);
+  background: linear-gradient(180deg, rgba(24, 20, 36, 0.8) 0%, rgba(14, 15, 22, 0.95) 100%);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 25px rgba(139, 92, 246, 0.12);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 28px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  transition: color var(--transition-fast);
+}
+
+.faq-question:hover {
+  color: #c084fc;
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-purple);
+  flex-shrink: 0;
+  transition: transform var(--transition-smooth);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: #c084fc;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+  padding: 0 28px;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 400px;
+  padding: 0 28px 26px 28px;
+}
+
+.faq-answer p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.faq-answer strong {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .faq-question {
+    padding: 20px;
+    font-size: 0.95rem;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 20px 20px 20px;
+  }
+}
+
+/* ==========================================================================
    Pre-Footer High-Impact CTA Banner
    ========================================================================== */
 .prefooter-section {

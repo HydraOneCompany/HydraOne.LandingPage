@@ -31,8 +31,44 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardGlowEffects();
   initMobileMenu();
   initOfferingToggle();
+  initFaqAccordion();
   initWhatsAppTriggers();
 });
+
+/* ==========================================================================
+   FAQ Accordion Logic (Accessible & Smooth Animation)
+   ========================================================================== */
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    if (!questionBtn) return;
+
+    questionBtn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      // Fecha outros itens para experiência limpa e focada
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const btn = otherItem.querySelector('.faq-question');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Alterna estado do item clicado
+      if (isActive) {
+        item.classList.remove('active');
+        questionBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('active');
+        questionBtn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
 
 /* ==========================================================================
    Offering & Pricing Toggle (Produtos Dev vs Consultoria Especializada)

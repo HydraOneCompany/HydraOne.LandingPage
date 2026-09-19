@@ -25,7 +25,7 @@ Esta landing page foi construída do zero seguindo os mais elevados padrões de 
 - **FAQ Interativo (Accordion):** Perguntas frequentes com animação suave de expansão e colapso via JavaScript.
 - **Navegação Inteligente & Efeitos Visuais:** Header com efeito blur ao rolar a página, menu responsivo mobile e efeito glow radial que segue o cursor nos cards.
 - **100% Responsivo:** Layout fluído adaptado para smartphones, tablets e monitores ultrawide.
-- **Performance & SEO:** Código semântico leve, meta tags Open Graph completas e carregamento ultrarrápido sem dependência de bibliotecas externas pesadas.
+- **SEO Técnico & Google Rich Snippets:** Implementação de `robots.txt`, `sitemap.xml`, tags canônicas, Open Graph, Twitter Cards e dados estruturados Schema.org JSON-LD (`ProfessionalService`, `FAQPage`, `Service` e `BreadcrumbList`) para maximizar visibilidade orgânica e ativar acordeões diretamente nos resultados do Google.
 
 ---
 
@@ -33,9 +33,9 @@ Esta landing page foi construída do zero seguindo os mais elevados padrões de 
 
 | Tecnologia | Finalidade |
 | :--- | :--- |
-| **HTML5 Semântico** | Estrutura acessível, SEO otimizado e tags Open Graph para compartilhamento social |
+| **HTML5 Semântico** | Estrutura acessível, SEO otimizado, JSON-LD Schema.org e tags Open Graph |
 | **Vanilla CSS3** | Design system modular com CSS Custom Properties (variáveis), Grid, Flexbox e animações |
-| **Vanilla JavaScript (ES6+)** | Lógica interativa, modais, acordeões e manipulação do DOM |
+| **Vanilla JavaScript (ES6+)** | Lógica interativa, modais, acordeão de FAQ e manipulação do DOM |
 | **Google Fonts** | Tipografia refinada com *Plus Jakarta Sans* |
 
 ---
@@ -59,16 +59,19 @@ hydra/
 │       └── wings-system-figma.png  # Print do projeto real no Figma com fluxos de entrega
 ├── css/
 │   ├── variables.css               # Design tokens: paleta de cores, tipografia, bordas e sombras
-│   └── styles.css                  # Estilos globais, componentes e responsividade
+│   └── styles.css                  # Estilos globais, componentes, cases, FAQ e responsividade
 ├── js/
-│   └── main.js                     # Controladores de UI, modal de lead e acordeão
+│   └── main.js                     # Controladores de UI, modal de lead e acordeão de FAQ
 ├── fase-1-prototipacao.html        # Página detalhada da Fase 1 (Figma & Requisitos)
 ├── fase-2-desenvolvimento-continuo.html # Página detalhada da Fase 2 (Team Topologies)
 ├── fase-3-deploy-sustentacao.html  # Página detalhada da Fase 3 (Feature Flags)
+├── robots.txt                      # Diretrizes de rastreamento para robôs de busca
+├── sitemap.xml                     # Mapa de URLs estruturado para o Google Search Console
 ├── .gitignore                      # Regras de exclusão para Git
-├── index.html                      # Ponto de entrada principal da aplicação
+├── index.html                      # Ponto de entrada principal da aplicação com SEO completo
 └── README.md                       # Documentação completa do projeto
 ```
+
 
 ---
 
