@@ -18,7 +18,9 @@ Esta landing page foi construída do zero seguindo os mais elevados padrões de 
 - **Integração Total de Contato via WhatsApp:** Todos os botões de ação e planos de contratação direcionam para o WhatsApp com mensagens de abertura personalizadas por serviço (SaaS, Landing Page, ERP Corporativo, Auditoria, Squad Sênior e Advisory).
 - **Briefing Inteligente no WhatsApp:** Modal de contato que coleta dados básicos do projeto (nome, empresa, escopo e detalhes) e monta automaticamente um briefing completo pronto para envio no WhatsApp.
 - **Design Obsidian Glassmorphism:** Estética visual futurista e sofisticada com paleta dark obsidian, reflexos em vidro, iluminação sutil de bordas e gradientes dinâmicos.
-- **Showcase Interativo de Código:** Alternador dinâmico de linguagens e stacks corporativas (Go, Python FastAPI, Rust, C# .NET 8 e Java Spring Boot 3) com syntax highlighting estilizado e cópia para área de transferência.
+- **Cases de Sucesso & Destaque Wings:** Seção comercial de impacto apresentando produtos reais entregues pela Hydra One, com destaque completo para a plataforma de logística on-demand Wings (App mobile + Painel Web), além de espaço modular para novos lançamentos.
+- **Header Otimizado & Ultra-Responsivo:** Barra de navegação limpa, sem poluição de botões no topo para garantir 100% de usabilidade em smartphones e tablets, mantendo o botão flutuante de WhatsApp (FAB) acessível.
+- **Metodologia em 3 Fases com Validação Real no Figma:** Demonstração prática do processo de engenharia e paridade 1:1 entre telas do Figma e código final.
 - **Toggle Dinâmico de Ofertas (Projetos vs Consultoria):** Alternância instantânea de modelos de investimento (Preço Fixo por Escopo vs Alocação Sênior / Retainer Mensal).
 - **FAQ Interativo (Accordion):** Perguntas frequentes com animação suave de expansão e colapso via JavaScript.
 - **Navegação Inteligente & Efeitos Visuais:** Header com efeito blur ao rolar a página, menu responsivo mobile e efeito glow radial que segue o cursor nos cards.
@@ -33,8 +35,8 @@ Esta landing page foi construída do zero seguindo os mais elevados padrões de 
 | :--- | :--- |
 | **HTML5 Semântico** | Estrutura acessível, SEO otimizado e tags Open Graph para compartilhamento social |
 | **Vanilla CSS3** | Design system modular com CSS Custom Properties (variáveis), Grid, Flexbox e animações |
-| **Vanilla JavaScript (ES6+)** | Lógica interativa, modais, acordeões, showcase de código e manipulação do DOM |
-| **Google Fonts** | Tipografia refinada com *Plus Jakarta Sans* (interface) e *JetBrains Mono* (código) |
+| **Vanilla JavaScript (ES6+)** | Lógica interativa, modais, acordeões e manipulação do DOM |
+| **Google Fonts** | Tipografia refinada com *Plus Jakarta Sans* |
 
 ---
 
@@ -43,17 +45,26 @@ Esta landing page foi construída do zero seguindo os mais elevados padrões de 
 ```text
 hydra/
 ├── assets/
-│   └── images/                     # Recursos visuais e renders 3D
-│       ├── avatar-1.jpg            # Foto de depoimento de cliente
+│   └── images/                     # Todos os recursos visuais, logos, favicons e prints
+│       ├── fav.png                 # Ícone de favicon
+│       ├── favicon.ico             # Favicon padrão web
+│       ├── favicon.png             # Favicon png
+│       ├── logo.svg                # Logotipo vetorial oficial da Hydra One
 │       ├── hero-cubes.png          # Render 3D de obsidiana e cromo da dobra principal
-│       ├── step-1-cube.jpg         # Visual da Fase 01 (Imersão & Escopo)
-│       ├── step-2-polyhedron.jpg   # Visual da Fase 02 (Desenvolvimento Ágil)
-│       └── step-3-hollow-cube.jpg  # Visual da Fase 03 (Homologação & Suporte)
+│       ├── step-1-cube.jpg         # Visual da Fase 01 (Prototipação)
+│       ├── step-2-polyhedron.jpg   # Visual da Fase 02 (Entrega Contínua)
+│       ├── step-3-hollow-cube.jpg  # Visual da Fase 03 (Feature Flags & Deploy)
+│       ├── wings-logo.png          # Logo oficial da Wings Delivery
+│       ├── wings-screens-showcase.png # Telas reais de Splash, Home e Login do app Wings
+│       └── wings-system-figma.png  # Print do projeto real no Figma com fluxos de entrega
 ├── css/
 │   ├── variables.css               # Design tokens: paleta de cores, tipografia, bordas e sombras
 │   └── styles.css                  # Estilos globais, componentes e responsividade
 ├── js/
-│   └── main.js                     # Controladores de UI, modal de lead, acordeão e showcase
+│   └── main.js                     # Controladores de UI, modal de lead e acordeão
+├── fase-1-prototipacao.html        # Página detalhada da Fase 1 (Figma & Requisitos)
+├── fase-2-desenvolvimento-continuo.html # Página detalhada da Fase 2 (Team Topologies)
+├── fase-3-deploy-sustentacao.html  # Página detalhada da Fase 3 (Feature Flags)
 ├── .gitignore                      # Regras de exclusão para Git
 ├── index.html                      # Ponto de entrada principal da aplicação
 └── README.md                       # Documentação completa do projeto
